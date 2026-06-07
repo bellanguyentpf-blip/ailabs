@@ -181,16 +181,12 @@ export default async function ServiceDetailPage({
       {/* Testimonial */}
       <section className="border-t border-border bg-card">
         <div className="container-editorial py-12 md:py-16">
-          <blockquote className="flex flex-col gap-5">
-            <p className="font-display text-xl font-medium leading-snug md:text-2xl">
+          <blockquote className="border-l-[3px] border-brand pl-6">
+            <p className="font-display text-lg italic font-medium leading-snug md:text-xl">
               &ldquo;AILABS rebuilt our site and content engine. Organic traffic more than doubled and we finally publish on schedule, every week.&rdquo;
             </p>
-            <footer className="flex items-center gap-3">
-              <div className="size-8 rounded-full bg-foreground" />
-              <div>
-                <span className="block text-sm font-semibold">Linh Tran</span>
-                <span className="block text-xs text-muted-foreground">Founder, Fishbone</span>
-              </div>
+            <footer className="mt-3">
+              <span className="text-sm text-muted-foreground">— Linh Tran</span>
             </footer>
           </blockquote>
         </div>

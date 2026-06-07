@@ -38,6 +38,7 @@ export async function generateMetadata({
       template: `%s · ${dict.brand.name}`,
     },
     description: dict.home.hero.subtitle,
+    robots: { index: false, follow: false },
     openGraph: {
       title,
       description: dict.home.hero.subtitle,

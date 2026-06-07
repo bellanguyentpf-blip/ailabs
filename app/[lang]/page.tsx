@@ -104,6 +104,7 @@ export default async function HomePage({
               { name: "Laban", src: "/laban.png", h: 40, href: "https://labancapital.vn/" },
               { name: "Macv", src: "/macv-logo-removebg.png", h: 34, href: "https://www.macv.com.vn/" },
               { name: "Miracle Meals", src: "/MIRACLE-MEALS-favicon.png", h: 56, href: "https://www.miraclemeals.org/" },
+              { name: "An Scent", src: "/an-scent.png", h: 64, href: undefined },
             ].map((client) => (
               <li key={client.name} className="flex items-center">
                 {client.src ? (

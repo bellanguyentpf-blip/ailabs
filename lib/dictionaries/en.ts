@@ -220,6 +220,106 @@ export const en = {
         "Monthly content & link roadmap",
         "Rank, traffic & AI-citation reporting",
       ],
+      sections: [
+        {
+          title: "Get Found Where Customers Search Today",
+          body: [
+            "Search is no longer limited to Google. Potential customers now discover businesses through ChatGPT, Gemini, Perplexity, and a growing number of AI-powered search experiences.",
+            "We help businesses improve visibility across both traditional search engines and emerging AI discovery platforms through a combined SEO, AEO, and GEO strategy. The goal is not simply to rank higher. It is to ensure your brand appears wherever customers are looking for answers.",
+          ],
+        },
+        {
+          title: "Strategy Before Execution",
+          body: [
+            "Every engagement begins with a comprehensive audit of your website, search visibility, content ecosystem, and competitive landscape.",
+            "From there, we develop a keyword and topic strategy designed to capture demand across the entire customer journey, including primary commercial keywords, supporting semantic topics, long-tail opportunities, and question-based searches commonly used in AI platforms. Rather than chasing individual keywords, we build topical authority around the subjects that matter most to your business.",
+          ],
+        },
+        {
+          title: "Built for SEO and AI Search",
+          body: [
+            "Modern search engines increasingly reward expertise, authority, and topical depth. Our content strategy is structured around pillar pages, topic clusters, supporting content, and entity-based optimization to strengthen visibility across both search engines and AI systems.",
+            "Every content asset is created with a dual purpose: helping search engines understand your expertise while providing genuinely useful information for potential customers.",
+          ],
+        },
+        {
+          title: "Data-Driven Content Production",
+          body: [
+            "Our workflow combines experienced strategists with AI-assisted research and content production systems.",
+            "Using platforms such as SEMrush, Ahrefs, and Google Search Console alongside proprietary AI workflows, we identify content opportunities, monitor search trends, and optimize content before publication. The result is a scalable content engine that balances efficiency with quality.",
+          ],
+        },
+        {
+          title: "Technical SEO and Authority Building",
+          body: [
+            "Strong rankings require more than content alone. We optimize technical SEO foundations including site architecture, internal linking, schema markup, crawlability, page performance, and authority signals that help search engines better understand and trust your website.",
+            "Every optimization initiative is prioritized based on potential business impact, not vanity metrics.",
+          ],
+        },
+        {
+          title: "Programmatic SEO for Scalable Growth",
+          body: [
+            "For businesses in competitive or large-scale markets, we develop programmatic SEO frameworks that allow hundreds or thousands of high-quality pages to be created efficiently while maintaining relevance and search intent alignment.",
+            "Combined with strategic content clusters, this creates scalable organic growth that would be difficult to achieve through traditional content production alone.",
+          ],
+        },
+        {
+          title: "Transparent Reporting and Continuous Optimization",
+          body: [
+            "SEO and AI search visibility are ongoing processes. We provide automated reporting that tracks keyword visibility, organic traffic growth, and AI search presence over time.",
+            "These insights help identify new opportunities, prioritize optimization efforts, and ensure your strategy evolves alongside changes in search behavior and AI technology.",
+          ],
+        },
+        {
+          title: "Built Around Your Audience",
+          body: [
+            "Traffic alone does not grow a business. Every strategy we develop is aligned with your ideal customer profile, ensuring content not only ranks well but resonates with the people most likely to become customers.",
+            "By combining technical SEO, content strategy, and AI search optimization, we help businesses build sustainable visibility, stronger authority, and long-term organic growth.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "What is the difference between SEO, AEO, and GEO?",
+          a: "SEO (Search Engine Optimization) improves your visibility on Google and traditional search engines. AEO (Answer Engine Optimization) structures your content to appear in featured snippets and direct answers. GEO (Generative Engine Optimization) ensures your brand is cited and recommended by AI platforms like ChatGPT, Gemini, and Perplexity. We optimize for all three.",
+        },
+        {
+          q: "How long does it take to see results from SEO?",
+          a: "Technical fixes and on-page improvements can show results within 4 to 8 weeks. Content-driven rankings typically take 3 to 6 months to build meaningful traffic. AI search presence can develop faster once your content establishes clear topical authority.",
+        },
+        {
+          q: "What does a technical SEO audit cover?",
+          a: "Our audit covers crawlability, indexation, site speed, Core Web Vitals, mobile performance, URL structure, internal linking, duplicate content, schema markup, and authority signals. We prioritize findings by business impact so you know what to fix first.",
+        },
+        {
+          q: "How do you optimize for AI search engines like ChatGPT and Perplexity?",
+          a: "AI platforms pull answers from sources that demonstrate clear expertise, structured content, and topical depth. We build content around entity-based optimization, structured data, concise factual answers, and authoritative pillar pages that AI systems are more likely to cite.",
+        },
+        {
+          q: "Do you write the content as part of this service?",
+          a: "Yes. Content creation is integrated into our SEO workflow. We handle keyword research, content briefs, copywriting, on-page optimization, and publication. All content is written to satisfy both search intent and reader value.",
+        },
+        {
+          q: "What is topical authority and why does it matter?",
+          a: "Topical authority means covering a subject comprehensively enough that search engines and AI platforms recognize your website as a trusted source on that topic. Instead of optimizing individual pages in isolation, we build interconnected content clusters that signal depth and expertise across your entire subject area.",
+        },
+        {
+          q: "How do you measure the success of an SEO campaign?",
+          a: "We track keyword rankings, organic traffic, click-through rates, conversion rates from organic traffic, backlink growth, and AI search citations. Monthly reports give you a clear view of progress and what is driving it.",
+        },
+        {
+          q: "Do you offer programmatic SEO?",
+          a: "Yes. For businesses in competitive or high-volume markets, we design programmatic SEO systems that generate large numbers of optimized pages at scale. Each page is built around genuine search intent rather than thin or templated content.",
+        },
+        {
+          q: "Can you help if our website has been penalized by Google?",
+          a: "Yes. We identify the cause of the penalty, whether it is a manual action or an algorithmic issue, and develop a recovery plan. This typically involves removing or improving low-quality content, disavowing toxic links, and rebuilding technical foundations.",
+        },
+        {
+          q: "How is your approach different from other SEO agencies?",
+          a: "Most SEO agencies optimize for Google alone. We build strategies that cover traditional SEO alongside AI search visibility, which is where a growing share of buying decisions now begin. Combined with in-house content production and transparent reporting, this gives clients a more complete and future-ready search strategy.",
+        },
+      ],
     },
     {
       slug: "ai-content-marketing",
@@ -387,7 +487,7 @@ export const en = {
       titleTail: "for AI-first brands.",
       subtitle:
         "AILABS designs websites, search strategies and content systems that win in the age of AI, engineered to be found by people and recommended by machines.",
-      markets: "Serving clients across the US, Australia, Thailand, Vietnam and Sweden.",
+      markets: "Trusted by businesses across the US, Australia, Thailand, Vietnam, and Sweden.",
       primaryCta: "Start a project",
       secondaryCta: "See our work",
     },
@@ -395,7 +495,7 @@ export const en = {
       { value: "10+", label: "Years of experience" },
       { value: "50+", label: "Projects shipped" },
       { value: "3.2×", label: "Avg. traffic lift" },
-      { value: "5", label: "Core services" },
+      { value: "Global", label: "Service delivery" },
     ],
     marquee: [
       "AI Search Optimization",
@@ -597,7 +697,7 @@ export const en = {
     stats: [
       { value: "10+", label: "Years of experience" },
       { value: "50+", label: "Projects delivered" },
-      { value: "5", label: "Core services" },
+      { value: "Global", label: "Service delivery" },
       { value: "100%", label: "Senior team" },
     ],
     valuesTitle: "How we operate",
@@ -733,8 +833,16 @@ export const en = {
       namePlaceholder: "Jane Doe",
       email: "Email",
       emailPlaceholder: "you@company.com",
+      phone: "Phone",
+      phonePlaceholder: "+1 ...",
       company: "Company",
       companyPlaceholder: "Company name",
+      jobTitle: "Job title",
+      jobTitlePlaceholder: "Head of Marketing",
+      linkedin: "LinkedIn",
+      linkedinPlaceholder: "https://linkedin.com/in/...",
+      url: "Website URL",
+      urlPlaceholder: "https://yoursite.com",
       service: "What do you need?",
       servicePlaceholder: "Select a service",
       message: "Project details",
@@ -794,6 +902,8 @@ export const en = {
     jobTitlePlaceholder: "Head of Marketing",
     linkedin: "LinkedIn profile",
     linkedinPlaceholder: "https://linkedin.com/in/...",
+    url: "Website URL",
+    urlPlaceholder: "https://yoursite.com",
     service: "Service of interest",
     servicePlaceholder: "Select a service",
     note: "Note",

@@ -31,6 +31,7 @@ import {
 } from "@/components/ui/accordion"
 import { Logo } from "@/components/site/logo"
 import { LanguageSwitcher } from "@/components/site/language-switcher"
+import { BookCallDialog, type BookingLabels } from "@/components/site/book-call-dialog"
 import { localeHref, navRoutes, type Locale, type NavKey } from "@/lib/routes"
 
 type ServiceLink = { slug: string; name: string }
@@ -41,12 +42,14 @@ export function Navbar({
   services,
   ctaLabel,
   viewAllLabel,
+  bookingLabels,
 }: {
   lang: Locale
   labels: Record<NavKey, string>
   services: ServiceLink[]
   ctaLabel: string
   viewAllLabel: string
+  bookingLabels: BookingLabels
 }) {
   const pathname = usePathname() ?? ""
   const [scrolled, setScrolled] = React.useState(false)
@@ -120,7 +123,6 @@ export function Navbar({
               </NavigationMenuItem>
 
               {simpleRoutes
-                .filter((r) => r.key !== "contact")
                 .map((r) => (
                   <NavigationMenuItem key={r.key}>
                     <NavigationMenuLink asChild>
@@ -145,9 +147,14 @@ export function Navbar({
           <div className="hidden items-center gap-1 sm:flex">
             <LanguageSwitcher lang={lang} />
           </div>
-          <Button asChild size="sm" className="hidden lg:inline-flex">
-            <Link href={localeHref(lang, "/contact")}>{labels.contact}</Link>
-          </Button>
+          <div className="hidden lg:block">
+            <BookCallDialog
+              lang={lang}
+              labels={bookingLabels}
+              services={services}
+              trigger={<Button size="sm">{ctaLabel}</Button>}
+            />
+          </div>
 
           {/* Mobile menu */}
           <Sheet open={open} onOpenChange={setOpen}>
@@ -215,11 +222,12 @@ export function Navbar({
                 <div className="mt-4">
                   <LanguageSwitcher lang={lang} />
                 </div>
-                <SheetClose asChild>
-                  <Button asChild className="mt-2 w-full">
-                    <Link href={localeHref(lang, "/contact")}>{ctaLabel}</Link>
-                  </Button>
-                </SheetClose>
+                <BookCallDialog
+                  lang={lang}
+                  labels={bookingLabels}
+                  services={services}
+                  trigger={<Button className="mt-2 w-full">{ctaLabel}</Button>}
+                />
               </nav>
             </SheetContent>
           </Sheet>

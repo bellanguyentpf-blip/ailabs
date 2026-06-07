@@ -1,16 +1,24 @@
 import "server-only"
 import { cookies } from "next/headers"
 
-// Use `||` (not `??`) so an empty/comment-stripped env value falls back safely.
-const ADMIN_USER = process.env.ADMIN_USERNAME || "Trang"
-const ADMIN_PASS = process.env.ADMIN_PASSWORD || "#Bella0421"
 const SESSION_SECRET =
   process.env.ADMIN_SESSION_SECRET || "ailabs-admin-7f3a9c1e2b6d4f80-secret"
+
+const ACCOUNTS: { user: string; pass: string }[] = [
+  {
+    user: process.env.ADMIN_USERNAME || "Trang",
+    pass: process.env.ADMIN_PASSWORD || "#Bella0421",
+  },
+  {
+    user: process.env.ADMIN_USERNAME_2 || "jason",
+    pass: process.env.ADMIN_PASSWORD_2 || "1234",
+  },
+]
 
 export const SESSION_COOKIE = "ailabs_admin"
 
 export function checkCredentials(user: string, pass: string): boolean {
-  return user === ADMIN_USER && pass === ADMIN_PASS
+  return ACCOUNTS.some((a) => a.user === user && a.pass === pass)
 }
 
 export function sessionToken(): string {

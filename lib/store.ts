@@ -16,6 +16,8 @@ export type AuditRequest = {
   note: string
 }
 
+export type BookingStatus = "requested" | "confirmed" | "cancelled"
+
 export type BookingRequest = {
   id: string
   createdAt: string
@@ -27,11 +29,27 @@ export type BookingRequest = {
   company: string
   jobTitle: string
   linkedin: string
+  url: string
   service: string
   note: string
+  status?: BookingStatus
 }
 
-type Store = { audits: AuditRequest[]; bookings: BookingRequest[] }
+export type ContactRequest = {
+  id: string
+  createdAt: string
+  name: string
+  email: string
+  phone: string
+  company: string
+  jobTitle: string
+  linkedin: string
+  url: string
+  service: string
+  message: string
+}
+
+type Store = { audits: AuditRequest[]; bookings: BookingRequest[]; contacts: ContactRequest[] }
 
 const FILE = path.join(process.cwd(), ".data", "submissions.json")
 
@@ -39,9 +57,13 @@ async function read(): Promise<Store> {
   try {
     const raw = await fs.readFile(FILE, "utf8")
     const parsed = JSON.parse(raw) as Partial<Store>
-    return { audits: parsed.audits ?? [], bookings: parsed.bookings ?? [] }
+    return {
+      audits: parsed.audits ?? [],
+      bookings: parsed.bookings ?? [],
+      contacts: parsed.contacts ?? [],
+    }
   } catch {
-    return { audits: [], bookings: [] }
+    return { audits: [], bookings: [], contacts: [] }
   }
 }
 
@@ -91,12 +113,43 @@ export async function addBookingRequest(
     company: str(payload.company),
     jobTitle: str(payload.jobTitle),
     linkedin: str(payload.linkedin),
+    url: str(payload.url),
     service: str(payload.service),
     note: str(payload.note),
   })
   await write(store)
 }
 
+export async function addContactRequest(
+  payload: Record<string, unknown>
+): Promise<void> {
+  const store = await read()
+  store.contacts.unshift({
+    id: newId(),
+    createdAt: new Date().toISOString(),
+    name: str(payload.name),
+    email: str(payload.email),
+    phone: str(payload.phone),
+    company: str(payload.company),
+    jobTitle: str(payload.jobTitle),
+    linkedin: str(payload.linkedin),
+    url: str(payload.url),
+    service: str(payload.service),
+    message: str(payload.message),
+  })
+  await write(store)
+}
+
 export async function getSubmissions(): Promise<Store> {
   return read()
+}
+
+export async function updateBookingStatus(
+  id: string,
+  status: BookingStatus
+): Promise<void> {
+  const store = await read()
+  const booking = store.bookings.find((b) => b.id === id)
+  if (booking) booking.status = status
+  await write(store)
 }

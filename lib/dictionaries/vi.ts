@@ -117,6 +117,48 @@ export const vi: Dictionary = {
         "Lộ trình nội dung & backlink hằng tháng",
         "Báo cáo thứ hạng, traffic & trích dẫn AI",
       ],
+      faq: [
+        {
+          q: "SEO, AEO và GEO khác nhau như thế nào?",
+          a: "SEO tối ưu khả năng hiển thị trên Google và các công cụ tìm kiếm truyền thống. AEO cấu trúc nội dung để xuất hiện trong featured snippet và câu trả lời trực tiếp. GEO đảm bảo thương hiệu được trích dẫn bởi các nền tảng AI như ChatGPT, Gemini và Perplexity. Chúng tôi tối ưu cho cả ba.",
+        },
+        {
+          q: "Mất bao lâu để thấy kết quả từ SEO?",
+          a: "Các cải thiện kỹ thuật và on-page có thể cho kết quả trong 4 đến 8 tuần. Thứ hạng từ nội dung thường mất 3 đến 6 tháng để tạo traffic đáng kể. Khả năng hiển thị trên AI search có thể phát triển nhanh hơn khi nội dung của bạn xây dựng được thẩm quyền chủ đề rõ ràng.",
+        },
+        {
+          q: "Audit SEO kỹ thuật bao gồm những gì?",
+          a: "Audit của chúng tôi bao gồm khả năng crawl, index, tốc độ trang, Core Web Vitals, hiệu suất mobile, cấu trúc URL, liên kết nội bộ, nội dung trùng lặp, schema markup và tín hiệu thẩm quyền. Chúng tôi ưu tiên các vấn đề theo mức độ ảnh hưởng đến doanh nghiệp.",
+        },
+        {
+          q: "Bạn tối ưu cho AI search như ChatGPT và Perplexity như thế nào?",
+          a: "Các nền tảng AI ưu tiên các nguồn thể hiện chuyên môn rõ ràng, nội dung có cấu trúc và chiều sâu chủ đề. Chúng tôi xây dựng nội dung dựa trên tối ưu hóa thực thể, dữ liệu có cấu trúc, câu trả lời thực tế súc tích và các trang pillar có thẩm quyền mà hệ thống AI có khả năng trích dẫn cao hơn.",
+        },
+        {
+          q: "Dịch vụ này có bao gồm viết nội dung không?",
+          a: "Có. Sản xuất nội dung được tích hợp vào quy trình SEO của chúng tôi. Chúng tôi xử lý nghiên cứu từ khoá, brief nội dung, viết bài, tối ưu on-page và xuất bản. Tất cả nội dung đều được viết để đáp ứng cả search intent lẫn giá trị cho người đọc.",
+        },
+        {
+          q: "Topical authority là gì và tại sao nó quan trọng?",
+          a: "Topical authority có nghĩa là bao phủ một chủ đề đủ toàn diện để các công cụ tìm kiếm và nền tảng AI nhận ra website của bạn là nguồn đáng tin cậy về chủ đề đó. Thay vì tối ưu từng trang riêng lẻ, chúng tôi xây dựng các cụm nội dung liên kết với nhau để tạo tín hiệu chiều sâu và chuyên môn.",
+        },
+        {
+          q: "Bạn đo lường thành công của chiến dịch SEO như thế nào?",
+          a: "Chúng tôi theo dõi thứ hạng từ khoá, traffic tự nhiên, tỷ lệ nhấp, tỷ lệ chuyển đổi từ traffic tự nhiên, tăng trưởng backlink và trích dẫn AI search. Báo cáo hàng tháng cho bạn thấy tiến độ rõ ràng và những gì đang tạo ra kết quả.",
+        },
+        {
+          q: "Bạn có cung cấp dịch vụ Programmatic SEO không?",
+          a: "Có. Với các doanh nghiệp trong thị trường cạnh tranh cao hoặc có quy mô lớn, chúng tôi thiết kế hệ thống programmatic SEO tạo ra số lượng lớn trang được tối ưu. Mỗi trang được xây dựng xung quanh search intent thực sự, không phải nội dung mỏng hay template.",
+        },
+        {
+          q: "Bạn có thể giúp nếu website bị Google phạt không?",
+          a: "Có. Chúng tôi xác định nguyên nhân của hình phạt, dù là manual action hay vấn đề thuật toán, và phát triển kế hoạch phục hồi. Thường bao gồm loại bỏ hoặc cải thiện nội dung kém chất lượng, disavow link độc hại và xây dựng lại nền tảng kỹ thuật.",
+        },
+        {
+          q: "Cách tiếp cận của bạn khác gì so với các agency SEO khác?",
+          a: "Hầu hết agency SEO chỉ tối ưu cho Google. Chúng tôi xây dựng chiến lược bao gồm cả SEO truyền thống lẫn AI search visibility, nơi ngày càng nhiều quyết định mua hàng bắt đầu. Kết hợp với sản xuất nội dung nội bộ và báo cáo minh bạch, khách hàng có chiến lược tìm kiếm toàn diện và sẵn sàng cho tương lai hơn.",
+        },
+      ],
     },
     {
       slug: "ai-content-marketing",
@@ -279,12 +321,12 @@ export const vi: Dictionary = {
   home: {
     hero: {
       eyebrow: "AI · SEO · Web · Tự động hoá",
-      titleLead: "Chúng tôi xây",
-      titleEmphasis: "cỗ máy tăng trưởng",
-      titleTail: "cho thương hiệu ưu tiên AI.",
+      titleLead: "Digital marketing",
+      titleEmphasis: "thực chiến,",
+      titleTail: "kết quả thực tế.",
       subtitle:
         "AILABS thiết kế website, chiến lược tìm kiếm và hệ thống nội dung chiến thắng trong kỷ nguyên AI, được con người tìm thấy và máy móc gợi ý.",
-      markets: "Phục vụ khách hàng tại Mỹ, Úc, Thái Lan, Việt Nam và Thuỵ Điển.",
+      markets: "Được tin dùng bởi doanh nghiệp tại Mỹ, Úc, Thái Lan, Việt Nam và Thuỵ Điển.",
       primaryCta: "Bắt đầu dự án",
       secondaryCta: "Xem dự án của chúng tôi",
     },
@@ -292,7 +334,7 @@ export const vi: Dictionary = {
       { value: "10+", label: "Năm kinh nghiệm" },
       { value: "50+", label: "Dự án đã triển khai" },
       { value: "3,2×", label: "Tăng traffic trung bình" },
-      { value: "5", label: "Dịch vụ cốt lõi" },
+      { value: "Global", label: "Cung cấp toàn cầu" },
     ],
     marquee: [
       "Tối ưu Tìm kiếm AI",
@@ -494,7 +536,7 @@ export const vi: Dictionary = {
     stats: [
       { value: "10+", label: "Năm kinh nghiệm" },
       { value: "50+", label: "Dự án đã bàn giao" },
-      { value: "5", label: "Dịch vụ cốt lõi" },
+      { value: "Global", label: "Cung cấp toàn cầu" },
       { value: "100%", label: "Đội ngũ senior" },
     ],
     valuesTitle: "Cách chúng tôi vận hành",
@@ -630,8 +672,16 @@ export const vi: Dictionary = {
       namePlaceholder: "Nguyễn Văn A",
       email: "Email",
       emailPlaceholder: "ban@congty.com",
+      phone: "Số điện thoại",
+      phonePlaceholder: "+84 ...",
       company: "Công ty",
       companyPlaceholder: "Tên công ty",
+      jobTitle: "Chức vụ",
+      jobTitlePlaceholder: "Trưởng phòng Marketing",
+      linkedin: "LinkedIn",
+      linkedinPlaceholder: "https://linkedin.com/in/...",
+      url: "Website",
+      urlPlaceholder: "https://website-cua-ban.com",
       service: "Bạn cần gì?",
       servicePlaceholder: "Chọn một dịch vụ",
       message: "Chi tiết dự án",
@@ -691,6 +741,8 @@ export const vi: Dictionary = {
     jobTitlePlaceholder: "Trưởng phòng Marketing",
     linkedin: "Trang LinkedIn",
     linkedinPlaceholder: "https://linkedin.com/in/...",
+    url: "Website",
+    urlPlaceholder: "https://website-cua-ban.com",
     service: "Dịch vụ quan tâm",
     servicePlaceholder: "Chọn một dịch vụ",
     note: "Ghi chú",

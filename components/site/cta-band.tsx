@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/site/reveal"
@@ -24,8 +23,7 @@ export function CtaBand({
   const button = (
     <Button size="lg" variant="secondary" className="group h-11 px-5 text-sm">
       {buttonLabel}
-      <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-    </Button>
+          </Button>
   )
   return (
     <section className="container-editorial py-20 md:py-28">
@@ -58,8 +56,7 @@ export function CtaBand({
               >
                 <Link href={localeHref(lang, href)}>
                   {buttonLabel}
-                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                                  </Link>
               </Button>
             )}
           </div>

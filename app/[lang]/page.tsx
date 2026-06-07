@@ -1,6 +1,15 @@
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, ArrowUpRight } from "lucide-react"
+
+const caseStudyLogos: Record<string, string> = {
+  fishbone: "/IMG_0522.JPG",
+  cbl: "/couturebridalla.avif",
+  "beauty-by-hien": "/beautybyhienlogo.png",
+}
+const caseStudyLogoPadding: Record<string, string> = {
+  "beauty-by-hien": "p-0",
+}
+import { ArrowUpRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Reveal } from "@/components/site/reveal"
@@ -63,7 +72,6 @@ export default async function HomePage({
                 trigger={
                   <Button size="lg" className="group h-11 px-5">
                     {dict.cta.audit}
-                    <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
                   </Button>
                 }
               />
@@ -76,7 +84,7 @@ export default async function HomePage({
 
         {/* stats strip */}
         <Reveal delay={280} className="container-editorial pb-12 md:pb-16 relative z-10">
-          <dl className="grid grid-cols-2 divide-x divide-y divide-border border-t border-l border-border md:grid-cols-4 md:divide-y-0">
+          <dl className="grid grid-cols-2 md:grid-cols-4">
             {home.stats.map((s) => (
               <div key={s.label} className="flex flex-col gap-1 p-5 md:p-6">
                 <dt className="font-display text-3xl font-medium md:text-4xl">
@@ -90,7 +98,7 @@ export default async function HomePage({
       </section>
 
       {/* ── Trusted by ───────────────────────────────────────── */}
-      <section className="border-y border-border bg-card">
+      <section className="border-t border-border bg-card">
         <div className="container-editorial flex flex-col items-center gap-7 py-12">
           <p className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
             {home.trustedBy}
@@ -135,12 +143,12 @@ export default async function HomePage({
           title={home.servicesSection.title}
           desc={home.servicesSection.desc}
         />
-        <div className="mt-12 border-t border-border">
+        <div className="mt-12">
           {dict.servicesList.map((s, i) => (
             <Reveal key={s.slug} delay={i * 40}>
               <Link
                 href={localeHref(lang, `/services/${s.slug}`)}
-                className="group grid items-center gap-4 border-b border-border py-7 md:grid-cols-[1.4fr_2fr_auto] md:gap-8"
+                className="group grid items-center gap-4 py-7 md:grid-cols-[1.4fr_2fr_auto] md:gap-8"
               >
                 <h3 className="font-display text-xl font-medium md:text-2xl">
                   {s.name}
@@ -191,7 +199,6 @@ export default async function HomePage({
           <Button asChild variant="outline" className="shrink-0">
             <Link href={localeHref(lang, "/case-studies")}>
               {dict.cta.viewAll}
-              <ArrowRight />
             </Link>
           </Button>
         </div>
@@ -203,9 +210,21 @@ export default async function HomePage({
                 className="card-elevated card-interactive group flex h-full flex-col gap-5 p-6"
               >
                 <div className="flex items-center justify-between">
-                  <span className="flex size-12 items-center justify-center rounded-lg bg-primary font-display text-base font-semibold text-primary-foreground">
-                    {cs.monogram}
-                  </span>
+                  {caseStudyLogos[cs.slug] ? (
+                    <div className="flex size-12 items-center justify-center rounded-lg bg-white border border-border overflow-hidden">
+                      <Image
+                        src={caseStudyLogos[cs.slug]}
+                        alt={cs.client}
+                        width={48}
+                        height={48}
+                        className={`object-contain w-full h-full ${caseStudyLogoPadding[cs.slug] ?? "p-1"}`}
+                      />
+                    </div>
+                  ) : (
+                    <span className="flex size-12 items-center justify-center rounded-lg bg-primary font-display text-base font-semibold text-primary-foreground">
+                      {cs.monogram}
+                    </span>
+                  )}
                   <ArrowUpRight className="size-5 text-muted-foreground transition-colors group-hover:text-brand" />
                 </div>
                 <div className="flex flex-col gap-1">

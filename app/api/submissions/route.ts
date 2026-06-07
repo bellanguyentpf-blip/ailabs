@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 
-import { addAuditRequest, addBookingRequest } from "@/lib/store"
+import { addAuditRequest, addBookingRequest, addContactRequest } from "@/lib/store"
 
 export const runtime = "nodejs"
 
@@ -20,6 +20,10 @@ export async function POST(request: Request) {
   }
   if (body.type === "booking") {
     await addBookingRequest(payload)
+    return NextResponse.json({ ok: true })
+  }
+  if (body.type === "contact") {
+    await addContactRequest(payload)
     return NextResponse.json({ ok: true })
   }
   return NextResponse.json({ ok: false, error: "Unknown type" }, { status: 400 })

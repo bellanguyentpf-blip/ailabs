@@ -90,7 +90,8 @@ export default async function LangLayout({
               lang={lang}
               labels={navLabels}
               viewAllLabel={dict.cta.viewAll}
-              ctaLabel={dict.cta.contact}
+              ctaLabel={dict.cta.bookCall}
+              bookingLabels={dict.booking}
               services={dict.servicesList.map((s) => ({
                 slug: s.slug,
                 name: s.name,

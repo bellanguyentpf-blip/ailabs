@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, Check, LineChart } from "lucide-react"
+import { Check, LineChart } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -133,7 +133,6 @@ export default async function PricingPage({
             <Button asChild size="lg" variant="secondary" className="group h-11 px-5">
               <Link href={localeHref(lang, "/contact")}>
                 {pricing.training.cta}
-                <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
               </Link>
             </Button>
           </div>

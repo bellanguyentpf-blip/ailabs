@@ -48,6 +48,8 @@ export type BookingLabels = {
   jobTitlePlaceholder: string
   linkedin: string
   linkedinPlaceholder: string
+  url: string
+  urlPlaceholder: string
   service: string
   servicePlaceholder: string
   note: string
@@ -62,11 +64,13 @@ const TIME_SLOTS = ["09:00", "10:00", "11:00", "14:00", "15:00", "16:00"]
 export function BookCallDialog({
   lang,
   triggerLabel,
+  trigger,
   labels,
   services,
 }: {
   lang: Locale
-  triggerLabel: string
+  triggerLabel?: string
+  trigger?: React.ReactNode
   labels: BookingLabels
   services: { slug: string; name: string }[]
 }) {
@@ -76,12 +80,36 @@ export function BookCallDialog({
   const [time, setTime] = React.useState<string>("")
   const [service, setService] = React.useState<string>("")
   const [submitting, setSubmitting] = React.useState(false)
+  const [blockedSlots, setBlockedSlots] = React.useState<{ date: string; time: string }[]>([])
 
   const today = React.useMemo(() => {
     const d = new Date()
     d.setHours(0, 0, 0, 0)
     return d
   }, [])
+
+  React.useEffect(() => {
+    if (!open) return
+    fetch("/api/availability")
+      .then((r) => r.json())
+      .then(setBlockedSlots)
+      .catch(() => {})
+  }, [open])
+
+  const selectedDateKey = date ? date.toISOString().slice(0, 10) : null
+
+  const bookedTimesForDate = React.useMemo(() => {
+    if (!selectedDateKey) return new Set<string>()
+    return new Set(
+      blockedSlots.filter((s) => s.date === selectedDateKey).map((s) => s.time)
+    )
+  }, [blockedSlots, selectedDateKey])
+
+  function isDateFullyBooked(d: Date) {
+    const key = d.toISOString().slice(0, 10)
+    const booked = blockedSlots.filter((s) => s.date === key).map((s) => s.time)
+    return TIME_SLOTS.every((slot) => booked.includes(slot))
+  }
 
   const formattedDate = date
     ? new Intl.DateTimeFormat(lang === "vi" ? "vi-VN" : "en-US", {
@@ -139,13 +167,14 @@ export function BookCallDialog({
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogTrigger asChild>
-        <button
-          type="button"
-          className="inline-flex w-fit items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
-        >
-          {triggerLabel}
-          <ArrowUpRight className="size-3" />
-        </button>
+        {trigger ?? (
+          <button
+            type="button"
+            className="inline-flex w-fit items-center gap-1 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            {triggerLabel}
+          </button>
+        )}
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
@@ -168,9 +197,12 @@ export function BookCallDialog({
                 selected={date}
                 onSelect={setDate}
                 disabled={(d) =>
-                  d < today || d.getDay() === 0 || d.getDay() === 6
+                  d < today ||
+                  d.getDay() === 0 ||
+                  d.getDay() === 6 ||
+                  isDateFullyBooked(d)
                 }
-                className="rounded-xl border border-border bg-card p-3"
+                className="w-full rounded-xl border border-border bg-card p-3 [&>*]:w-full"
               />
             </div>
 
@@ -179,22 +211,28 @@ export function BookCallDialog({
                 {labels.timeLabel}
               </span>
               <div className="grid grid-cols-3 gap-2">
-                {TIME_SLOTS.map((slot) => (
-                  <button
-                    key={slot}
-                    type="button"
-                    onClick={() => setTime(slot)}
-                    aria-pressed={time === slot}
-                    className={cn(
-                      "rounded-lg border py-2 font-mono text-sm transition-colors",
-                      time === slot
-                        ? "border-brand bg-brand text-brand-foreground"
-                        : "border-border text-foreground hover:border-foreground/30"
-                    )}
-                  >
-                    {slot}
-                  </button>
-                ))}
+                {TIME_SLOTS.map((slot) => {
+                  const isBooked = bookedTimesForDate.has(slot)
+                  return (
+                    <button
+                      key={slot}
+                      type="button"
+                      onClick={() => !isBooked && setTime(slot)}
+                      disabled={isBooked}
+                      aria-pressed={time === slot}
+                      className={cn(
+                        "rounded-lg border py-2 font-mono text-sm transition-colors",
+                        isBooked
+                          ? "cursor-not-allowed border-border bg-muted text-muted-foreground line-through opacity-50"
+                          : time === slot
+                            ? "border-brand bg-brand text-brand-foreground"
+                            : "border-border text-foreground hover:border-foreground/30"
+                      )}
+                    >
+                      {slot}
+                    </button>
+                  )
+                })}
               </div>
             </div>
 
@@ -217,7 +255,7 @@ export function BookCallDialog({
             ) : null}
 
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field id="book-name" label={labels.name}>
+              <Field id="book-name" label={labels.name} required>
                 <Input
                   id="book-name"
                   name="name"
@@ -226,19 +264,7 @@ export function BookCallDialog({
                   autoComplete="name"
                 />
               </Field>
-              <Field id="book-phone" label={labels.phone}>
-                <Input
-                  id="book-phone"
-                  name="phone"
-                  type="tel"
-                  placeholder={labels.phonePlaceholder}
-                  autoComplete="tel"
-                />
-              </Field>
-            </div>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Field id="book-email" label={labels.email}>
+              <Field id="book-email" label={labels.email} required>
                 <Input
                   id="book-email"
                   name="email"
@@ -248,10 +274,23 @@ export function BookCallDialog({
                   autoComplete="email"
                 />
               </Field>
-              <Field id="book-company" label={labels.company}>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <Field id="book-phone" label={labels.phone}>
+                <Input
+                  id="book-phone"
+                  name="phone"
+                  type="tel"
+                  placeholder={labels.phonePlaceholder}
+                  autoComplete="tel"
+                />
+              </Field>
+              <Field id="book-company" label={labels.company} required>
                 <Input
                   id="book-company"
                   name="company"
+                  required
                   placeholder={labels.companyPlaceholder}
                   autoComplete="organization"
                 />
@@ -267,15 +306,27 @@ export function BookCallDialog({
                   autoComplete="organization-title"
                 />
               </Field>
-              <Field id="book-linkedin" label={labels.linkedin}>
+              <Field id="book-linkedin" label={labels.linkedin} required>
                 <Input
                   id="book-linkedin"
                   name="linkedin"
                   type="url"
+                  required
                   placeholder={labels.linkedinPlaceholder}
                 />
               </Field>
             </div>
+
+            <Field id="book-url" label={labels.url} required>
+              <Input
+                id="book-url"
+                name="url"
+                type="url"
+                required
+                placeholder={labels.urlPlaceholder}
+                autoComplete="url"
+              />
+            </Field>
 
             <Field id="book-service" label={labels.service}>
               <input type="hidden" name="service" value={service} />
@@ -293,10 +344,11 @@ export function BookCallDialog({
               </Select>
             </Field>
 
-            <Field id="book-note" label={labels.note}>
+            <Field id="book-note" label={labels.note} required>
               <Textarea
                 id="book-note"
                 name="note"
+                required
                 rows={3}
                 placeholder={labels.notePlaceholder}
               />
@@ -333,16 +385,19 @@ export function BookCallDialog({
 function Field({
   id,
   label,
+  required,
   children,
 }: {
   id: string
   label: string
+  required?: boolean
   children: React.ReactNode
 }) {
   return (
     <div className="flex flex-col gap-2">
       <Label htmlFor={id} className="font-mono text-xs tracking-wide uppercase">
         {label}
+        {required && <span className="ml-0.5 text-red-500">*</span>}
       </Label>
       {children}
     </div>

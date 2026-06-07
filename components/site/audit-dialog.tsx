@@ -95,7 +95,7 @@ export function AuditDialog({
 
         <form onSubmit={onSubmit} className="mt-2 flex flex-col gap-4">
           <div className="grid gap-4 sm:grid-cols-2">
-            <Field id="audit-name" label={labels.name}>
+            <Field id="audit-name" label={labels.name} required>
               <Input
                 id="audit-name"
                 name="name"
@@ -104,19 +104,7 @@ export function AuditDialog({
                 autoComplete="name"
               />
             </Field>
-            <Field id="audit-phone" label={labels.phone}>
-              <Input
-                id="audit-phone"
-                name="phone"
-                type="tel"
-                placeholder={labels.phonePlaceholder}
-                autoComplete="tel"
-              />
-            </Field>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2">
-            <Field id="audit-email" label={labels.email}>
+            <Field id="audit-email" label={labels.email} required>
               <Input
                 id="audit-email"
                 name="email"
@@ -126,10 +114,23 @@ export function AuditDialog({
                 autoComplete="email"
               />
             </Field>
-            <Field id="audit-company" label={labels.company}>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field id="audit-phone" label={labels.phone}>
+              <Input
+                id="audit-phone"
+                name="phone"
+                type="tel"
+                placeholder={labels.phonePlaceholder}
+                autoComplete="tel"
+              />
+            </Field>
+            <Field id="audit-company" label={labels.company} required>
               <Input
                 id="audit-company"
                 name="company"
+                required
                 placeholder={labels.companyPlaceholder}
                 autoComplete="organization"
               />
@@ -145,21 +146,23 @@ export function AuditDialog({
                 autoComplete="organization-title"
               />
             </Field>
-            <Field id="audit-linkedin" label={labels.linkedin}>
+            <Field id="audit-linkedin" label={labels.linkedin} required>
               <Input
                 id="audit-linkedin"
                 name="linkedin"
                 type="url"
+                required
                 placeholder={labels.linkedinPlaceholder}
               />
             </Field>
           </div>
 
-          <Field id="audit-url" label={labels.url}>
+          <Field id="audit-url" label={labels.url} required>
             <Input
               id="audit-url"
               name="url"
               type="url"
+              required
               placeholder={labels.urlPlaceholder}
               autoComplete="url"
             />
@@ -181,10 +184,11 @@ export function AuditDialog({
             </Select>
           </Field>
 
-          <Field id="audit-note" label={labels.note}>
+          <Field id="audit-note" label={labels.note} required>
             <Textarea
               id="audit-note"
               name="note"
+              required
               rows={3}
               placeholder={labels.notePlaceholder}
             />
@@ -208,16 +212,19 @@ export function AuditDialog({
 function Field({
   id,
   label,
+  required,
   children,
 }: {
   id: string
   label: string
+  required?: boolean
   children: React.ReactNode
 }) {
   return (
     <div className="flex flex-col gap-2">
       <Label htmlFor={id} className="font-mono text-xs tracking-wide uppercase">
         {label}
+        {required && <span className="ml-0.5 text-red-500">*</span>}
       </Label>
       {children}
     </div>

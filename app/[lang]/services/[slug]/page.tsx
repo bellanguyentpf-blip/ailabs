@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { ArrowRight, ArrowUpRight, Check } from "lucide-react"
+import { ArrowUpRight, Check } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -41,6 +41,15 @@ export default async function ServiceDetailPage({
   const service = dict.servicesList.find((s) => s.slug === slug)
   if (!service) notFound()
 
+  const proofTags: Record<string, string[]> = {
+    "ai-website-development": ["Delivered in 7 days", "AI-powered workflow", "SEO & GEO ready", "Clients worldwide"],
+    "seo-ai-search": ["AI-powered workflow", "SEO & GEO ready", "AEO & GEO ready", "Clients worldwide"],
+    "ai-content-marketing": ["AI-powered workflow", "On-brand & consistent", "Clients worldwide"],
+    "shopify-development": ["AI-powered workflow", "Conversion-first", "Clients worldwide"],
+    "ai-training": ["Live sessions", "Hands-on & practical", "Vietnam only"],
+  }
+  const tags = proofTags[slug] ?? ["AI-powered workflow", "SEO & GEO ready", "Clients worldwide"]
+
   const others = dict.servicesList.filter((s) => s.slug !== slug)
 
   return (
@@ -57,7 +66,7 @@ export default async function ServiceDetailPage({
               {service.summary}
             </p>
             <div className="flex flex-wrap gap-2">
-              {["Delivered in 7 days", "AI-powered workflow", "SEO & GEO ready", "Clients worldwide"].map((tag) => (
+              {tags.map((tag) => (
                 <span key={tag} className="rounded-full border border-border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
                   {tag}
                 </span>
@@ -67,8 +76,7 @@ export default async function ServiceDetailPage({
               <Button asChild size="lg" className="group h-11 px-5">
                 <Link href={localeHref(lang, "/contact")}>
                   {dict.cta.getProposal}
-                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                                  </Link>
               </Button>
               <Link href={localeHref(lang, "/pricing")} className="flex items-center text-sm text-muted-foreground underline-offset-4 hover:text-foreground hover:underline">
                 {dict.nav.pricing}
@@ -170,8 +178,7 @@ export default async function ServiceDetailPage({
               <Button asChild size="lg" className="group h-11 px-5">
                 <Link href={localeHref(lang, "/contact")}>
                   {dict.cta.bookCall}
-                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                                  </Link>
               </Button>
             </div>
           </div>
@@ -204,8 +211,7 @@ export default async function ServiceDetailPage({
           <Button asChild size="lg" variant="outline" className="h-11 shrink-0 border-background/30 bg-transparent px-6 text-background hover:bg-background hover:text-foreground">
             <Link href={localeHref(lang, "/contact")}>
               {dict.cta.getProposal}
-              <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-            </Link>
+                          </Link>
           </Button>
         </div>
       </section>
@@ -225,8 +231,7 @@ export default async function ServiceDetailPage({
               <Button asChild size="lg" className="group h-11 shrink-0 px-6">
                 <Link href={localeHref(lang, "/contact")}>
                   Get a free audit
-                  <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
-                </Link>
+                                  </Link>
               </Button>
             </div>
           </div>

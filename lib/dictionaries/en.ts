@@ -19,6 +19,8 @@ export type Service = {
   deliverables: string[]
   flows?: ServiceFlow[]
   pricing?: ServicePricing
+  midCta?: { headline: string; sub: string }
+  sectionsTitle?: string
   sections?: ServiceSection[]
   faq?: ServiceFaq[]
 }
@@ -105,6 +107,11 @@ export const en = {
         "Production build & CMS handover",
         "Analytics, tracking & growth dashboard",
       ],
+      midCta: {
+        headline: "Organic traffic doubled. Leads up. Launched in 7 days.",
+        sub: "Your website should work this hard. Let's build it.",
+      },
+      sectionsTitle: "How we build websites that perform",
       sections: [
         {
           title: "Faster Launches Without Sacrificing Quality",
@@ -220,6 +227,11 @@ export const en = {
         "Monthly content & link roadmap",
         "Rank, traffic & AI-citation reporting",
       ],
+      midCta: {
+        headline: "More traffic. More leads. Visible on Google and AI search.",
+        sub: "Your competitors are optimising for both. Let's make sure you are too.",
+      },
+      sectionsTitle: "How we approach SEO and AI search",
       sections: [
         {
           title: "Get Found Where Customers Search Today",
@@ -325,44 +337,132 @@ export const en = {
       slug: "ai-content-marketing",
       no: "03",
       icon: "sparkles",
-      name: "Content & Automation",
-      tagline: "A content engine that runs itself.",
+      name: "AI Content & Creative Production",
+      tagline: "A complete content team without the overhead.",
       summary:
-        "Automated, on-brand content pipelines, research, drafting, repurposing and distribution, with a human editor at the helm.",
-      why: "Publishing consistently is an operations problem. We design AI workflows that turn one idea into a month of channel-ready content, reviewed by people, shipped on schedule.",
+        "We act as an extension of your team, producing written content, visual assets and marketing materials that build visibility, trust and demand across every channel.",
+      why: "Most teams don't have the time or resources to publish at the pace modern marketing requires. We combine human creativity with AI-powered workflows to handle the full content operation: planning, writing, design, publishing and optimisation.",
       highlights: [
-        "Custom AI workflows (n8n, Make, GPT pipelines)",
-        "Brand-voice tuning & editorial guardrails",
-        "Multi-channel repurposing (blog to social to email)",
-        "Performance loops feeding the next sprint",
+        "Website content: service pages, landing pages, case studies and blog",
+        "Social content tailored to your brand, industry and audience",
+        "Copywriting and visual assets produced together as one system",
+        "Built for SEO, GEO and AI-powered discovery platforms",
+        "Scalable production without sacrificing quality or brand consistency",
       ],
       deliverables: [
-        "Content strategy & brand-voice kit",
-        "Automated production pipeline",
-        "Editorial calendar & approval flow",
-        "Monthly analytics & optimization",
+        "Content strategy and brand voice kit",
+        "Website and landing page copy",
+        "Social content calendar and production",
+        "Campaign copy and creative assets",
+        "SEO, GEO and topical authority plan",
+      ],
+      midCta: {
+        headline: "Content that builds pipeline. Published on schedule, every week.",
+        sub: "Stop pushing content to tomorrow. Let's build your system.",
+      },
+      sectionsTitle: "What we produce and how",
+      sections: [
+        {
+          title: "Website content that converts",
+          body: [
+            "Your website content plays a critical role in how customers understand your business. We create service pages, landing pages, case studies, blog content and supporting website copy designed to communicate value clearly while supporting SEO and conversion goals.",
+            "Every piece is developed around your audience, positioning and business objectives. Not generic templates.",
+          ],
+        },
+        {
+          title: "Social content for modern brands",
+          body: [
+            "Building an online presence requires more than occasional posts. We create ongoing social content tailored to your brand, industry and audience, helping businesses stay active across platforms while maintaining a consistent voice and visual identity.",
+            "From educational content and thought leadership to promotional campaigns and brand storytelling, we help businesses create content people actually want to engage with.",
+          ],
+        },
+        {
+          title: "Copywriting and creative assets together",
+          body: [
+            "Great marketing happens when messaging and visuals work together. Our production process combines professional copywriting with AI-assisted creative design, allowing us to produce both written content and supporting visual assets efficiently.",
+            "Whether it's website graphics, social creatives, campaign visuals, blog imagery or branded marketing assets, we create content designed to work as a complete system rather than isolated pieces.",
+          ],
+        },
+        {
+          title: "Built for SEO, GEO and AI search",
+          body: [
+            "Modern content needs to perform across more than just Google. Our content strategies support traditional SEO while also improving visibility across AI-powered discovery platforms such as ChatGPT, Gemini and Perplexity.",
+            "By combining content strategy, search optimisation and topical authority development, we help businesses increase visibility wherever customers are searching for information.",
+          ],
+        },
+        {
+          title: "Scalable content production",
+          body: [
+            "As your business grows, content demands grow with it. Our production systems allow businesses to scale output without sacrificing quality, helping marketing teams publish more consistently while staying aligned with brand standards and business goals.",
+            "Whether you need a few strategic pieces each month or a high-volume content operation, we build workflows that support sustainable growth.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "What does AI Content and Creative Production include?",
+          a: "It covers the full content production process: strategy, writing, visual design, publishing and optimisation. We handle website copy, blog articles, social content, campaign assets and supporting creative, all produced as a coordinated system.",
+        },
+        {
+          q: "How is this different from hiring a freelance writer or designer?",
+          a: "We manage the entire workflow, from planning and research through to writing, design and distribution. Instead of coordinating separate writers, designers and strategists, you work with one team that handles everything and stays aligned with your brand and goals.",
+        },
+        {
+          q: "What types of content do you produce?",
+          a: "We produce website copy, service and landing pages, blog articles, case studies, social media content, ad copy, email campaigns, campaign visuals, social creatives and branded marketing assets.",
+        },
+        {
+          q: "Do you produce visuals as well as written content?",
+          a: "Yes. We combine professional copywriting with AI-assisted creative design, producing written content and visual assets together. This means campaign copy and its supporting graphics, social captions and their creatives, and website copy and its page visuals are all aligned from the start.",
+        },
+        {
+          q: "How do you maintain our brand voice and visual identity?",
+          a: "We build a brand voice kit and visual reference at the start of every engagement. These are used to configure our production workflows so every piece of content matches your tone, vocabulary and visual standards before it is reviewed and approved.",
+        },
+        {
+          q: "What is GEO and how does it differ from SEO?",
+          a: "SEO optimises content for traditional search engines like Google. GEO (Generative Engine Optimisation) structures content so it is cited and surfaced by AI-powered tools such as ChatGPT, Perplexity and Google AI Overviews. We build content strategies that address both.",
+        },
+        {
+          q: "How much content can you produce each month?",
+          a: "Volume depends on your plan and content mix. Most clients start with a combination of 4 to 8 website or blog pieces and a regular social content schedule. Once the production system is running, output scales without a proportional increase in time or cost.",
+        },
+        {
+          q: "Do you handle publishing and scheduling?",
+          a: "Yes. We connect to your publishing platforms and manage scheduling, formatting and distribution across channels. You review and approve content batches; we handle everything after that.",
+        },
+        {
+          q: "How long does it take to see results from content marketing?",
+          a: "Social content and campaign assets drive results immediately. SEO and GEO content typically takes 3 to 6 months to build meaningful visibility, depending on competition and domain authority. We track both short-term and long-term signals throughout.",
+        },
+        {
+          q: "Can you work alongside our existing marketing team?",
+          a: "Yes. We operate as a standalone content team or as an extension of your in-house staff. Many clients use us to scale output and handle production while their internal team focuses on strategy, stakeholder communication and campaign direction.",
+        },
       ],
     },
     {
       slug: "shopify-development",
       no: "04",
       icon: "shopping-bag",
-      name: "Shopify Store Development & Growth",
-      tagline: "Stores built to sell, scoped by flow.",
+      name: "Shopify Growth & Optimization",
+      tagline: "Turn your Shopify store into a scalable growth engine.",
       summary:
-        "Custom Shopify themes, apps and conversion flows, each workstream scoped and estimated transparently before we start.",
-      why: "We break Shopify projects into clear flows so you know exactly what each piece costs and delivers, no surprise invoices, no scope creep.",
+        "We help ecommerce brands build high-performing Shopify experiences designed to increase conversions, improve customer retention and support long-term growth.",
+      why: "A storefront alone doesn't generate revenue. We combine development, conversion optimization and marketing automation to build a store that actually grows.",
       highlights: [
-        "Custom theme & headless storefronts",
-        "Checkout, subscription & upsell flows",
-        "App integrations & custom Shopify apps",
-        "CRO, speed and analytics tuning",
+        "Conversion-focused storefronts for retail, subscription and DTC brands",
+        "CRO across product pages, checkout, upsells and post-purchase flows",
+        "Marketing automation for abandoned cart recovery, retention and LTV",
+        "Landing page systems built for paid campaigns and rapid testing",
+        "AI-powered workflows for future-ready ecommerce operations",
       ],
       deliverables: [
-        "Per-flow scope & estimate document",
-        "Design + build for each flow",
-        "QA, launch & merchant training",
-        "Post-launch optimization sprint",
+        "Store development and theme customisation",
+        "Conversion rate optimisation audit and implementation",
+        "Marketing automation flows and sequences",
+        "Dedicated landing page system",
+        "Post-launch growth strategy and reporting",
       ],
       flows: [
         {
@@ -386,34 +486,203 @@ export const en = {
           estimate: "Scoped per project",
         },
       ],
+      midCta: {
+        headline: "More revenue from the same traffic. That's the goal.",
+        sub: "Conversion optimization, automation and growth strategy built into one store.",
+      },
+      sectionsTitle: "How we grow Shopify stores",
+      sections: [
+        {
+          title: "Built around growth, not just design",
+          body: [
+            "Every Shopify project begins with understanding your products, customers, business model and growth goals. Whether you're selling physical products, subscriptions, digital products or running a hybrid ecommerce operation, we create storefronts designed to guide customers from discovery to purchase with as little friction as possible.",
+            "Our focus is always on improving conversion rates, average order value, customer retention and overall store performance. Not just how the store looks.",
+          ],
+        },
+        {
+          title: "Conversion optimization from day one",
+          body: [
+            "Many Shopify stores struggle because they focus on traffic before fixing conversion. We optimize key touchpoints throughout the customer journey: product pages, collection pages, landing pages, checkout experiences, subscription offers and post-purchase flows.",
+            "Every decision is guided by customer behavior, conversion data and proven ecommerce best practices. The goal is turning more visitors into paying customers.",
+          ],
+        },
+        {
+          title: "Marketing automation that drives revenue",
+          body: [
+            "Successful ecommerce brands don't rely solely on paid traffic. We implement automation systems that recover abandoned carts, increase repeat purchases, improve customer retention and maximize customer lifetime value.",
+            "From welcome sequences and browse abandonment flows to upsell campaigns and subscription retention programs, we create automated customer journeys that continue generating revenue long after the initial purchase.",
+          ],
+        },
+        {
+          title: "Landing pages built for performance",
+          body: [
+            "For product launches, paid advertising campaigns, seasonal promotions and conversion-focused marketing, we develop dedicated landing page systems designed to support rapid testing and optimization.",
+            "These pages are structured around conversion principles, helping brands improve campaign performance while maintaining a consistent customer experience.",
+          ],
+        },
+        {
+          title: "Experience across ecommerce models",
+          body: [
+            "Our team has worked with Shopify brands across retail, subscription businesses, direct-to-consumer brands and dropshipping operations. We've supported brands targeting customers in the United States, Australia, Europe and Southeast Asia.",
+            "We help businesses adapt their stores, customer journeys and marketing strategies to different markets and customer expectations.",
+          ],
+        },
+        {
+          title: "Beyond traditional ecommerce",
+          body: [
+            "The future of ecommerce is increasingly powered by AI. We help brands prepare for emerging shopping experiences including AI-powered search visibility, agentic commerce opportunities, automated content workflows and advanced store management systems.",
+            "By combining Shopify expertise with modern AI workflows, we help businesses stay ahead of changing customer behavior and technology trends.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "What does Shopify Growth and Optimization cover?",
+          a: "It covers the full scope of building and growing a Shopify store: development, conversion rate optimization, marketing automation, landing pages and growth strategy. We work across the entire customer journey rather than just delivering a built storefront.",
+        },
+        {
+          q: "How is this different from a standard Shopify development agency?",
+          a: "Most Shopify agencies focus on building and launching. We focus on building and growing. Every project includes conversion optimization, post-launch performance tracking and marketing systems that continue generating revenue after the store goes live.",
+        },
+        {
+          q: "What ecommerce business models do you work with?",
+          a: "We have experience with retail, subscription-based businesses, direct-to-consumer brands and dropshipping operations. We've also supported brands across multiple markets including the United States, Australia, Europe and Southeast Asia.",
+        },
+        {
+          q: "How do you improve conversion rates?",
+          a: "We optimize the key touchpoints in the customer journey: product and collection pages, landing pages, cart and checkout experience, upsell and cross-sell flows, and post-purchase sequences. Decisions are based on customer behavior data and proven ecommerce conversion principles.",
+        },
+        {
+          q: "What marketing automation do you set up?",
+          a: "We implement automation for abandoned cart recovery, welcome sequences, browse abandonment flows, upsell campaigns, post-purchase follow-ups and subscription retention programs. These are customer journeys that generate revenue automatically after the initial setup.",
+        },
+        {
+          q: "Do you build landing pages for paid campaigns?",
+          a: "Yes. We develop dedicated landing page systems for product launches, paid advertising, seasonal promotions and other conversion-focused campaigns. These pages are built to support rapid testing and are separate from the main store to avoid disrupting the standard customer journey.",
+        },
+        {
+          q: "Can you help with an existing Shopify store, not just new builds?",
+          a: "Yes. We work with new stores, migrations from other platforms, and existing Shopify setups that need conversion improvement, automation, or growth strategy. An audit of your current store is usually the starting point for existing businesses.",
+        },
+        {
+          q: "What does AI-powered ecommerce mean in practice?",
+          a: "It includes things like AI-powered search visibility so your products appear in tools like ChatGPT and Perplexity, automated content workflows that keep your store pages and product descriptions current, and advanced management systems that reduce manual operations. We help brands prepare for these changes now rather than reacting later.",
+        },
+        {
+          q: "How long does a Shopify project take?",
+          a: "It depends on scope. A storefront and theme build typically takes 2 to 4 weeks. Checkout and conversion work takes 1 to 2 weeks. Subscription and retention flows take 1 to 3 weeks. Custom app or integration work is scoped per project. We break projects into clear phases so you know timelines before work begins.",
+        },
+        {
+          q: "Do you provide ongoing support after launch?",
+          a: "Yes. Our role extends beyond development. We work with brands on an ongoing basis to monitor store performance, run optimization tests, improve automation flows and identify growth opportunities as the business evolves.",
+        },
+      ],
     },
     {
       slug: "ai-training",
       no: "05",
       icon: "graduation-cap",
-      name: "AI Consulting & Training",
-      tagline: "Upskill your team to ship with AI.",
+      name: "AI Training & Consulting",
+      tagline: "Learn AI beyond prompting.",
       summary:
-        "Hands-on, practical AI workshops for in-house marketing teams, built around your real tools, channels and workflows.",
-      why: "Tools don't transform teams, habits do. In two focused hours we get your marketers building real prompts, workflows and assets they use the next morning.",
+        "Practical AI training for individuals and organizations who want to move beyond basic tools and build real workflows, automation systems and lasting productivity.",
+      why: "Most people have tried AI tools. Few know how to make them work for their actual job. We focus on building workflows, not just prompts.",
       highlights: [
-        "Live, hands-on 2-hour sessions",
-        "Tailored to your channels & stack",
-        "Reusable prompt & workflow library",
-        "Available in Vietnam only",
+        "Applied to real work: content, research, marketing, operations and more",
+        "Covers workflow design, automation and AI agents, not just prompting",
+        "Hands-on exercises, demonstrations and real-world projects",
+        "Builds systems that continue creating value after training ends",
       ],
       deliverables: [
-        "Custom workshop curriculum",
-        "Prompt & automation playbook",
-        "Recording & resource pack",
+        "Custom training curriculum",
+        "Workflow and automation playbook",
+        "Recording and resource pack",
         "Follow-up Q&A support",
       ],
-      pricing: {
-        price: "700,000₫",
-        unit: "per person",
-        duration: "2-hour session",
-        note: "On-site AI training available in Vietnam only.",
+      midCta: {
+        headline: "Your team could be twice as productive with AI. Let's prove it.",
+        sub: "Hands-on training built around your actual workflows, not generic prompts.",
       },
+      sectionsTitle: "How the training works",
+      sections: [
+        {
+          title: "Practical training for real work",
+          body: [
+            "Most AI courses focus on theory or isolated tools. Our approach focuses on practical application. Participants learn how AI can support everyday work across content creation, research, marketing, operations, project management, software development and business processes.",
+            "Rather than teaching a single platform, we help participants understand how different AI tools can work together to achieve specific outcomes. The goal is to become more productive, more efficient and more capable in an AI-powered world.",
+          ],
+        },
+        {
+          title: "Beyond ChatGPT",
+          body: [
+            "The AI ecosystem continues to evolve rapidly, with new platforms, models and capabilities emerging every month. Our training helps participants understand the strengths and best use cases of modern AI platforms and how they can be combined into effective workflows.",
+            "From content creation and research to coding, automation, data analysis and knowledge management, participants learn how to select the right tools for the right tasks while avoiding common mistakes and inefficiencies.",
+          ],
+        },
+        {
+          title: "Build workflows, not just prompts",
+          body: [
+            "Prompting is only the first step. The real value of AI comes from designing workflows that connect tools, automate processes and reduce manual effort. Our training covers workflow design, automation principles, AI-assisted productivity systems, API integrations, AI agents and browser automation.",
+            "Participants learn how multiple tools can work together to support research, content production, customer service, internal operations, reporting, software development and other business functions. This systems-based approach creates significantly more value than using AI as a standalone chatbot.",
+          ],
+        },
+        {
+          title: "Hands-on learning",
+          body: [
+            "The fastest way to learn AI is by building. Every training program incorporates practical exercises, demonstrations and real-world projects that allow participants to apply concepts immediately.",
+            "Rather than leaving with a collection of prompts, participants leave with repeatable workflows, working systems and a deeper understanding of how AI can be integrated into everyday work. This hands-on approach accelerates adoption and builds long-term confidence.",
+          ],
+        },
+        {
+          title: "Designed for long-term adoption",
+          body: [
+            "Successful AI implementation is not about learning a single tool or following a list of prompts. It requires understanding how people, workflows and technology work together. We help individuals and organizations build lasting AI capabilities that continue creating value long after the training is complete.",
+            "Whether you want to improve productivity, automate workflows, accelerate content production, streamline operations or build AI-powered systems, we provide the knowledge and practical experience to make AI a meaningful part of your work.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "Who is this training designed for?",
+          a: "The training is designed for individuals and teams who want to go beyond basic AI tools and develop practical, workflow-level AI skills. This includes marketers, content creators, operations professionals, business owners, consultants and anyone who wants to use AI more effectively in their daily work.",
+        },
+        {
+          q: "Do participants need technical knowledge to attend?",
+          a: "No. The training is designed for non-technical participants and practitioners alike. We focus on practical application rather than programming or engineering concepts. Participants at all levels, from beginners to intermediate users, benefit from the workflow-first approach.",
+        },
+        {
+          q: "What AI tools and platforms are covered?",
+          a: "We cover a range of modern AI platforms including ChatGPT, Claude, Gemini and others, as well as automation tools, AI agents, browser automation, API integrations and knowledge management systems. The focus is on how tools work together rather than any single platform.",
+        },
+        {
+          q: "What is the difference between prompting and workflow design?",
+          a: "Prompting is asking an AI tool a question or giving it a task. Workflow design means connecting multiple tools and steps so that processes run automatically or semi-automatically with minimal manual effort. Workflow-level skills create significantly more value than individual prompts.",
+        },
+        {
+          q: "What will participants be able to do after the training?",
+          a: "Participants leave with repeatable workflows, working automation systems and a clear understanding of how to apply AI to their specific role or business. The training is practical, so participants build real outputs during the session rather than just absorbing information.",
+        },
+        {
+          q: "Can the training be customised for a specific industry or team?",
+          a: "Yes. Every program is tailored to the participants' roles, tools and business context. We build the curriculum around real use cases from the organisation rather than using generic examples.",
+        },
+        {
+          q: "How long is a training session?",
+          a: "Standard sessions are 2 hours. For teams requiring broader coverage across multiple topics or tools, multi-session programs are available. Contact us to discuss the right format for your team.",
+        },
+        {
+          q: "Is the training available online or in-person only?",
+          a: "On-site training is currently available in Vietnam only. Contact us to discuss availability for other locations or remote delivery options.",
+        },
+        {
+          q: "What happens after the training?",
+          a: "Participants receive a recording of the session, a workflow and automation playbook, and access to follow-up Q&A support. The goal is to ensure concepts are applied in real work environments, not just understood in theory.",
+        },
+        {
+          q: "How do I book a session for my team?",
+          a: "Get in touch through our contact page or book a discovery call. We'll discuss your team's goals, current AI usage and what would make the most practical impact, then build a program around that.",
+        },
+      ],
     },
   ] as Service[]),
 

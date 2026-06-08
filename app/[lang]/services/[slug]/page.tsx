@@ -146,7 +146,7 @@ export default async function ServiceDetailPage({
                   >
                     <h3 className="font-display text-lg font-medium">{f.name}</h3>
                     <p className="text-sm text-muted-foreground">{f.scope}</p>
-                    <Badge variant="secondary" className="w-fit font-mono">
+                    <Badge variant="secondary" className="w-fit whitespace-nowrap font-mono">
                       {f.estimate}
                     </Badge>
                   </div>
@@ -200,28 +200,30 @@ export default async function ServiceDetailPage({
       </section>
 
       {/* Mid-page CTA */}
-      <section className="border-y border-border bg-foreground text-background">
-        <div className="container-editorial flex flex-col items-start gap-6 py-12 md:flex-row md:items-center md:justify-between">
-          <div className="flex flex-col gap-1">
-            <p className="font-display text-xl font-medium md:text-2xl">
-              Organic traffic doubled. Leads up. Launched in 7 days.
-            </p>
-            <p className="text-sm text-background/60">Your website should work this hard. Let&apos;s build it.</p>
+      {service.midCta ? (
+        <section className="border-y border-border bg-foreground text-background">
+          <div className="container-editorial flex flex-col items-start gap-6 py-12 md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-1">
+              <p className="font-display text-xl font-medium md:text-2xl">
+                {service.midCta.headline}
+              </p>
+              <p className="text-sm text-background/60">{service.midCta.sub}</p>
+            </div>
+            <Button asChild size="lg" variant="outline" className="h-11 shrink-0 border-background/30 bg-transparent px-6 text-background hover:bg-background hover:text-foreground">
+              <Link href={localeHref(lang, "/contact")}>
+                {dict.cta.getProposal}
+              </Link>
+            </Button>
           </div>
-          <Button asChild size="lg" variant="outline" className="h-11 shrink-0 border-background/30 bg-transparent px-6 text-background hover:bg-background hover:text-foreground">
-            <Link href={localeHref(lang, "/contact")}>
-              {dict.cta.getProposal}
-                          </Link>
-          </Button>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       {/* Long-form sections — accordion */}
       {service.sections ? (
         <section className="bg-card">
           <div className="container-editorial py-16 md:py-20">
             <div className="mb-8">
-              <h2 className="font-display text-2xl font-medium">How We Build Websites That Perform</h2>
+              <h2 className="font-display text-2xl font-medium">{service.sectionsTitle ?? "In depth"}</h2>
             </div>
             <ServiceSectionsAccordion sections={service.sections} />
             <div className="mt-14 flex flex-col items-start gap-4 border-t border-border pt-10 sm:flex-row sm:items-center sm:justify-between">

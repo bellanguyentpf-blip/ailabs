@@ -164,44 +164,132 @@ export const vi: Dictionary = {
       slug: "ai-content-marketing",
       no: "03",
       icon: "sparkles",
-      name: "Content & Automation",
-      tagline: "Cỗ máy nội dung tự vận hành.",
+      name: "AI Content & Creative Production",
+      tagline: "Đội content trọn gói, không cần tuyển dụng.",
       summary:
-        "Quy trình nội dung tự động, đúng nhận diện thương hiệu, nghiên cứu, viết, tái sử dụng và phân phối, với biên tập viên là con người dẫn dắt.",
-      why: "Xuất bản đều đặn là bài toán vận hành. Chúng tôi thiết kế quy trình AI biến một ý tưởng thành cả tháng nội dung sẵn sàng cho mọi kênh, được con người duyệt và ra mắt đúng lịch.",
+        "Chúng tôi hoạt động như một phần mở rộng của đội bạn, sản xuất nội dung viết, tài sản hình ảnh và tài liệu marketing giúp xây dựng độ nhận diện, niềm tin và nhu cầu trên mọi kênh.",
+      why: "Hầu hết các đội nhóm không có đủ thời gian hay nguồn lực để xuất bản theo tốc độ mà marketing hiện đại yêu cầu. Chúng tôi kết hợp sáng tạo của con người với quy trình AI để xử lý toàn bộ vận hành nội dung: lên kế hoạch, viết bài, thiết kế, đăng bài và tối ưu hóa.",
       highlights: [
-        "Quy trình AI tuỳ chỉnh (n8n, Make, pipeline GPT)",
-        "Tinh chỉnh giọng thương hiệu & rào chắn biên tập",
-        "Tái sử dụng đa kênh (blog to social to email)",
-        "Vòng lặp hiệu suất nuôi sprint kế tiếp",
+        "Nội dung website: trang dịch vụ, landing page, case study và blog",
+        "Social content phù hợp với thương hiệu, ngành và tệp khách hàng",
+        "Copywriting và tài sản hình ảnh được sản xuất cùng nhau như một hệ thống",
+        "Tối ưu cho SEO, GEO và các nền tảng khám phá dựa trên AI",
+        "Quy trình sản xuất có thể mở rộng mà không đánh đổi chất lượng hay nhất quán thương hiệu",
       ],
       deliverables: [
-        "Chiến lược nội dung & bộ kit giọng thương hiệu",
-        "Pipeline sản xuất tự động",
-        "Lịch biên tập & luồng duyệt",
-        "Phân tích & tối ưu hằng tháng",
+        "Chiến lược nội dung và bộ kit giọng thương hiệu",
+        "Copy website và landing page",
+        "Lịch và sản xuất content mạng xã hội",
+        "Copy chiến dịch và tài sản sáng tạo",
+        "Kế hoạch SEO, GEO và xây dựng thẩm quyền chủ đề",
+      ],
+      midCta: {
+        headline: "Nội dung xây pipeline. Xuất bản đúng lịch, mỗi tuần.",
+        sub: "Ngừng trì hoãn nội dung. Hãy để chúng tôi xây hệ thống cho bạn.",
+      },
+      sectionsTitle: "Những gì chúng tôi sản xuất và cách thực hiện",
+      sections: [
+        {
+          title: "Nội dung website tăng chuyển đổi",
+          body: [
+            "Nội dung website đóng vai trò then chốt trong việc khách hàng hiểu doanh nghiệp của bạn như thế nào. Chúng tôi tạo trang dịch vụ, landing page, case study, nội dung blog và copy hỗ trợ được thiết kế để truyền tải giá trị rõ ràng, đồng thời hỗ trợ mục tiêu SEO và chuyển đổi.",
+            "Mỗi nội dung được phát triển xung quanh tệp khách hàng, định vị và mục tiêu kinh doanh của bạn. Không phải template chung chung.",
+          ],
+        },
+        {
+          title: "Social content cho thương hiệu hiện đại",
+          body: [
+            "Xây dựng hiện diện trực tuyến đòi hỏi nhiều hơn những bài đăng ngẫu nhiên. Chúng tôi tạo nội dung mạng xã hội liên tục, phù hợp với thương hiệu, ngành và tệp khách hàng, giúp doanh nghiệp duy trì hoạt động đều đặn trên các nền tảng với giọng nói và nhận diện hình ảnh nhất quán.",
+            "Từ nội dung giáo dục và thought leadership đến các chiến dịch quảng bá và brand storytelling, chúng tôi giúp doanh nghiệp tạo ra nội dung mà mọi người thực sự muốn tương tác.",
+          ],
+        },
+        {
+          title: "Copywriting và tài sản sáng tạo cùng nhau",
+          body: [
+            "Marketing hiệu quả xảy ra khi thông điệp và hình ảnh phối hợp nhịp nhàng. Quy trình sản xuất của chúng tôi kết hợp copywriting chuyên nghiệp với thiết kế sáng tạo hỗ trợ AI, cho phép sản xuất cả nội dung viết và tài sản hình ảnh hỗ trợ một cách hiệu quả.",
+            "Dù là đồ họa website, creative mạng xã hội, hình ảnh chiến dịch, ảnh blog hay tài sản marketing có thương hiệu, chúng tôi tạo nội dung được thiết kế để hoạt động như một hệ thống hoàn chỉnh thay vì những mảnh rời rạc.",
+          ],
+        },
+        {
+          title: "Tối ưu cho SEO, GEO và tìm kiếm AI",
+          body: [
+            "Nội dung hiện đại cần hoạt động tốt trên nhiều hơn chỉ Google. Chiến lược nội dung của chúng tôi hỗ trợ SEO truyền thống đồng thời cải thiện khả năng hiển thị trên các nền tảng khám phá dựa trên AI như ChatGPT, Gemini và Perplexity.",
+            "Bằng cách kết hợp chiến lược nội dung, tối ưu tìm kiếm và phát triển thẩm quyền chủ đề, chúng tôi giúp doanh nghiệp tăng khả năng hiển thị ở bất cứ nơi nào khách hàng đang tìm kiếm thông tin.",
+          ],
+        },
+        {
+          title: "Sản xuất nội dung có thể mở rộng",
+          body: [
+            "Khi doanh nghiệp phát triển, nhu cầu nội dung cũng tăng theo. Hệ thống sản xuất của chúng tôi cho phép doanh nghiệp mở rộng sản lượng mà không hy sinh chất lượng, giúp đội marketing xuất bản đều đặn hơn trong khi vẫn phù hợp với tiêu chuẩn thương hiệu và mục tiêu kinh doanh.",
+            "Dù bạn cần vài nội dung chiến lược mỗi tháng hay một vận hành nội dung khối lượng lớn, chúng tôi xây dựng quy trình hỗ trợ tăng trưởng bền vững.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "AI Content và Creative Production bao gồm những gì?",
+          a: "Dịch vụ bao gồm toàn bộ quy trình sản xuất nội dung: chiến lược, viết bài, thiết kế hình ảnh, đăng bài và tối ưu hóa. Chúng tôi xử lý copy website, bài blog, nội dung mạng xã hội, tài sản chiến dịch và creative hỗ trợ, tất cả được sản xuất như một hệ thống phối hợp.",
+        },
+        {
+          q: "Dịch vụ này khác gì so với thuê freelancer riêng lẻ?",
+          a: "Chúng tôi quản lý toàn bộ workflow, từ lên kế hoạch và nghiên cứu đến viết bài, thiết kế và phân phối. Thay vì phối hợp nhiều writer, designer và strategist riêng biệt, bạn làm việc với một đội duy nhất xử lý mọi thứ và luôn phù hợp với thương hiệu và mục tiêu của bạn.",
+        },
+        {
+          q: "Bạn sản xuất những loại nội dung nào?",
+          a: "Chúng tôi sản xuất copy website, trang dịch vụ và landing page, bài blog, case study, nội dung mạng xã hội, copy quảng cáo, email chiến dịch, hình ảnh chiến dịch, creative mạng xã hội và tài sản marketing có thương hiệu.",
+        },
+        {
+          q: "Bạn có sản xuất cả hình ảnh lẫn nội dung viết không?",
+          a: "Có. Chúng tôi kết hợp copywriting chuyên nghiệp với thiết kế sáng tạo hỗ trợ AI, sản xuất cả nội dung viết và tài sản hình ảnh cùng nhau. Copy chiến dịch và đồ họa hỗ trợ, caption mạng xã hội và creative của nó, copy website và hình ảnh trang đều được phối hợp từ đầu.",
+        },
+        {
+          q: "Làm sao đảm bảo đúng giọng thương hiệu và nhận diện hình ảnh?",
+          a: "Chúng tôi xây dựng bộ brand voice kit và tài liệu tham chiếu hình ảnh ngay từ đầu dự án. Những tài liệu này được dùng để cấu hình quy trình sản xuất, đảm bảo mỗi nội dung khớp với tone, từ vựng và tiêu chuẩn hình ảnh của bạn trước khi được review và duyệt.",
+        },
+        {
+          q: "GEO khác SEO như thế nào?",
+          a: "SEO tối ưu nội dung cho công cụ tìm kiếm truyền thống như Google. GEO (Generative Engine Optimisation) cấu trúc nội dung để được trích dẫn và hiển thị bởi các công cụ AI như ChatGPT, Perplexity và Google AI Overviews. Chúng tôi xây dựng chiến lược nội dung đáp ứng cả hai.",
+        },
+        {
+          q: "Mỗi tháng bạn sản xuất được bao nhiêu nội dung?",
+          a: "Sản lượng phụ thuộc vào gói dịch vụ và mix nội dung. Hầu hết khách hàng bắt đầu với 4 đến 8 bài website hoặc blog kết hợp với lịch social content đều đặn. Sau khi hệ thống sản xuất đã chạy ổn định, sản lượng có thể mở rộng mà không cần tăng tương ứng về thời gian hay chi phí.",
+        },
+        {
+          q: "Bạn có lo phần đăng bài và lên lịch không?",
+          a: "Có. Chúng tôi kết nối với các nền tảng đăng bài của bạn và quản lý lịch đăng, định dạng và phân phối đa kênh. Bạn review và duyệt từng loạt nội dung, chúng tôi xử lý mọi thứ sau đó.",
+        },
+        {
+          q: "Mất bao lâu để thấy kết quả từ content marketing?",
+          a: "Nội dung mạng xã hội và tài sản chiến dịch tạo ra kết quả ngay lập tức. Nội dung SEO và GEO thường mất 3 đến 6 tháng để xây dựng độ hiển thị đáng kể, tùy thuộc vào mức độ cạnh tranh và domain authority. Chúng tôi theo dõi cả tín hiệu ngắn hạn lẫn dài hạn xuyên suốt quá trình.",
+        },
+        {
+          q: "Bạn có thể làm việc cùng đội marketing nội bộ của chúng tôi không?",
+          a: "Có. Chúng tôi hoạt động như một đội content độc lập hoặc như phần mở rộng của nhân sự nội bộ. Nhiều khách hàng dùng chúng tôi để mở rộng sản lượng và xử lý production trong khi đội nội bộ tập trung vào chiến lược, giao tiếp với stakeholder và định hướng chiến dịch.",
+        },
       ],
     },
     {
       slug: "shopify-development",
       no: "04",
       icon: "shopping-bag",
-      name: "Shopify Store Development & Growth",
-      tagline: "Cửa hàng sinh ra để bán, báo giá theo từng flow.",
+      name: "Shopify Growth & Optimization",
+      tagline: "Biến Shopify store thành cỗ máy tăng trưởng có thể mở rộng.",
       summary:
-        "Theme, app và luồng chuyển đổi Shopify tuỳ chỉnh, mỗi hạng mục được phân tích và báo giá minh bạch trước khi bắt đầu.",
-      why: "Chúng tôi chia dự án Shopify thành các flow rõ ràng để bạn biết chính xác mỗi phần tốn bao nhiêu và mang lại gì, không hoá đơn bất ngờ, không phình phạm vi.",
+        "Chúng tôi giúp các thương hiệu thương mại điện tử xây dựng trải nghiệm Shopify hiệu suất cao, được thiết kế để tăng tỷ lệ chuyển đổi, cải thiện giữ chân khách hàng và hỗ trợ tăng trưởng dài hạn.",
+      why: "Storefront đơn thuần không tạo ra doanh thu. Chúng tôi kết hợp phát triển, tối ưu chuyển đổi và tự động hóa marketing để xây dựng một store thực sự tăng trưởng.",
       highlights: [
-        "Theme tuỳ chỉnh & storefront headless",
-        "Luồng checkout, subscription & upsell",
-        "Tích hợp app & app Shopify riêng",
-        "Tối ưu CRO, tốc độ và phân tích",
+        "Storefront tập trung chuyển đổi cho bán lẻ, subscription và DTC",
+        "CRO trên trang sản phẩm, checkout, upsell và post-purchase",
+        "Tự động hóa marketing cho abandoned cart, giữ chân và LTV",
+        "Hệ thống landing page cho chiến dịch quảng cáo và A/B testing",
+        "Quy trình AI cho vận hành thương mại điện tử hiện đại",
       ],
       deliverables: [
-        "Tài liệu phạm vi & báo giá theo từng flow",
-        "Thiết kế + dựng cho mỗi flow",
-        "QA, ra mắt & đào tạo người bán",
-        "Sprint tối ưu sau ra mắt",
+        "Phát triển store và tùy chỉnh theme",
+        "Audit và triển khai tối ưu tỷ lệ chuyển đổi",
+        "Thiết lập flow tự động hóa marketing",
+        "Hệ thống landing page riêng biệt",
+        "Chiến lược tăng trưởng và báo cáo sau ra mắt",
       ],
       flows: [
         {
@@ -225,34 +313,203 @@ export const vi: Dictionary = {
           estimate: "Báo giá theo dự án",
         },
       ],
+      midCta: {
+        headline: "Doanh thu cao hơn từ cùng lượng traffic. Đó là mục tiêu.",
+        sub: "Tối ưu chuyển đổi, tự động hóa và chiến lược tăng trưởng tích hợp trong một store.",
+      },
+      sectionsTitle: "Cách chúng tôi phát triển Shopify store",
+      sections: [
+        {
+          title: "Xây dựng vì tăng trưởng, không chỉ thiết kế",
+          body: [
+            "Mỗi dự án Shopify bắt đầu bằng việc hiểu sản phẩm, khách hàng, mô hình kinh doanh và mục tiêu tăng trưởng của bạn. Dù bán sản phẩm vật lý, subscription, sản phẩm kỹ thuật số hay vận hành mô hình hybrid, chúng tôi tạo storefront được thiết kế để dẫn khách hàng từ khám phá đến mua hàng với ít rào cản nhất có thể.",
+            "Trọng tâm luôn là cải thiện tỷ lệ chuyển đổi, giá trị đơn hàng trung bình, giữ chân khách hàng và hiệu suất tổng thể của store, không chỉ là cửa hàng trông đẹp.",
+          ],
+        },
+        {
+          title: "Tối ưu chuyển đổi từ ngày đầu",
+          body: [
+            "Nhiều Shopify store gặp khó khăn vì tập trung vào traffic trước khi sửa chuyển đổi. Chúng tôi tối ưu các điểm chạm quan trọng trong hành trình khách hàng: trang sản phẩm, trang danh mục, landing page, trải nghiệm checkout, ưu đãi subscription và luồng sau mua hàng.",
+            "Mọi quyết định đều dựa trên hành vi khách hàng, dữ liệu chuyển đổi và best practices thương mại điện tử đã được kiểm chứng. Mục tiêu là chuyển nhiều khách truy cập hơn thành khách hàng trả tiền.",
+          ],
+        },
+        {
+          title: "Tự động hóa marketing tạo doanh thu",
+          body: [
+            "Các thương hiệu thương mại điện tử thành công không chỉ dựa vào paid traffic. Chúng tôi triển khai hệ thống tự động hóa giúp thu hồi abandoned cart, tăng mua lại, cải thiện giữ chân khách hàng và tối đa hóa customer lifetime value.",
+            "Từ welcome sequence và browse abandonment flow đến upsell campaign và subscription retention, chúng tôi tạo ra hành trình khách hàng tự động tiếp tục tạo doanh thu lâu dài sau lần mua đầu tiên.",
+          ],
+        },
+        {
+          title: "Landing page tối ưu cho hiệu suất",
+          body: [
+            "Với việc ra mắt sản phẩm, chiến dịch quảng cáo trả phí, khuyến mãi theo mùa và các sáng kiến marketing tập trung chuyển đổi, chúng tôi phát triển hệ thống landing page riêng được thiết kế để hỗ trợ kiểm thử và tối ưu hóa nhanh chóng.",
+            "Các trang này được cấu trúc theo nguyên tắc chuyển đổi, giúp thương hiệu cải thiện hiệu suất chiến dịch trong khi duy trì trải nghiệm khách hàng nhất quán.",
+          ],
+        },
+        {
+          title: "Kinh nghiệm đa mô hình thương mại điện tử",
+          body: [
+            "Đội ngũ của chúng tôi đã làm việc với các thương hiệu Shopify trong nhiều ngành và mô hình kinh doanh: bán lẻ, subscription, DTC và dropshipping. Chúng tôi đã hỗ trợ thương hiệu nhắm đến khách hàng tại Mỹ, Úc, châu Âu và Đông Nam Á.",
+            "Chúng tôi giúp doanh nghiệp điều chỉnh store, hành trình khách hàng và chiến lược marketing phù hợp với từng thị trường và kỳ vọng khác nhau của người mua.",
+          ],
+        },
+        {
+          title: "Vượt ra ngoài thương mại điện tử truyền thống",
+          body: [
+            "Tương lai của thương mại điện tử ngày càng được thúc đẩy bởi AI. Chúng tôi giúp thương hiệu chuẩn bị cho các trải nghiệm mua sắm mới: khả năng hiển thị trên tìm kiếm AI, cơ hội agentic commerce, quy trình nội dung tự động và hệ thống quản lý store tiên tiến.",
+            "Bằng cách kết hợp chuyên môn Shopify với quy trình AI hiện đại, chúng tôi giúp doanh nghiệp đón đầu thay đổi trong hành vi khách hàng và xu hướng công nghệ.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "Shopify Growth và Optimization bao gồm những gì?",
+          a: "Dịch vụ bao gồm toàn bộ phạm vi xây dựng và phát triển Shopify store: phát triển, tối ưu tỷ lệ chuyển đổi, tự động hóa marketing, landing page và chiến lược tăng trưởng. Chúng tôi làm việc trên toàn bộ hành trình khách hàng, không chỉ bàn giao storefront đã xây xong.",
+        },
+        {
+          q: "Dịch vụ này khác gì so với agency Shopify thông thường?",
+          a: "Hầu hết agency Shopify tập trung vào xây dựng và ra mắt. Chúng tôi tập trung vào xây dựng và tăng trưởng. Mỗi dự án bao gồm tối ưu chuyển đổi, theo dõi hiệu suất sau ra mắt và hệ thống marketing tiếp tục tạo doanh thu sau khi store đi vào hoạt động.",
+        },
+        {
+          q: "Bạn làm việc với những mô hình kinh doanh nào?",
+          a: "Chúng tôi có kinh nghiệm với bán lẻ, subscription, DTC và dropshipping. Chúng tôi cũng đã hỗ trợ thương hiệu trên nhiều thị trường bao gồm Mỹ, Úc, châu Âu và Đông Nam Á.",
+        },
+        {
+          q: "Bạn cải thiện tỷ lệ chuyển đổi như thế nào?",
+          a: "Chúng tôi tối ưu các điểm chạm quan trọng trong hành trình khách hàng: trang sản phẩm và danh mục, landing page, trải nghiệm giỏ hàng và checkout, luồng upsell và cross-sell, và sequence sau mua hàng. Quyết định dựa trên dữ liệu hành vi và các nguyên tắc chuyển đổi đã được kiểm chứng.",
+        },
+        {
+          q: "Bạn thiết lập những loại tự động hóa marketing nào?",
+          a: "Chúng tôi triển khai tự động hóa cho abandoned cart, welcome sequence, browse abandonment flow, upsell campaign, follow-up sau mua hàng và subscription retention. Đây là những hành trình khách hàng tự động tạo doanh thu liên tục sau khi thiết lập xong.",
+        },
+        {
+          q: "Bạn có xây dựng landing page cho quảng cáo trả phí không?",
+          a: "Có. Chúng tôi phát triển hệ thống landing page riêng cho ra mắt sản phẩm, quảng cáo trả phí, khuyến mãi theo mùa và các chiến dịch tập trung chuyển đổi. Các trang này được xây để hỗ trợ kiểm thử nhanh và tách biệt với store chính.",
+        },
+        {
+          q: "Bạn có thể giúp tối ưu store đang hoạt động không, không chỉ store mới?",
+          a: "Có. Chúng tôi làm việc với store mới, migration từ nền tảng khác và Shopify store đang hoạt động cần cải thiện chuyển đổi, tự động hóa hoặc chiến lược tăng trưởng. Audit store hiện tại thường là điểm bắt đầu cho doanh nghiệp đã có sẵn.",
+        },
+        {
+          q: "Thương mại điện tử AI có nghĩa là gì trong thực tế?",
+          a: "Bao gồm việc sản phẩm xuất hiện trên các công cụ AI như ChatGPT và Perplexity, quy trình nội dung tự động giữ cho trang store và mô tả sản phẩm luôn cập nhật, và hệ thống quản lý tiên tiến giảm thiểu vận hành thủ công. Chúng tôi giúp thương hiệu chuẩn bị cho những thay đổi này từ bây giờ.",
+        },
+        {
+          q: "Dự án Shopify mất bao lâu?",
+          a: "Tùy theo phạm vi. Storefront và theme thường mất 2 đến 4 tuần. Tối ưu checkout và chuyển đổi mất 1 đến 2 tuần. Luồng subscription và giữ chân mất 1 đến 3 tuần. App hoặc tích hợp riêng được báo giá theo dự án. Chúng tôi chia dự án thành các giai đoạn rõ ràng để bạn biết timeline trước khi bắt đầu.",
+        },
+        {
+          q: "Bạn có hỗ trợ sau khi ra mắt không?",
+          a: "Có. Vai trò của chúng tôi không dừng lại ở phát triển. Chúng tôi làm việc với thương hiệu liên tục để theo dõi hiệu suất store, chạy kiểm thử tối ưu, cải thiện luồng tự động hóa và xác định cơ hội tăng trưởng khi doanh nghiệp phát triển.",
+        },
+      ],
     },
     {
       slug: "ai-training",
       no: "05",
       icon: "graduation-cap",
-      name: "AI Consulting & Training",
-      tagline: "Nâng cấp đội ngũ để làm việc cùng AI.",
+      name: "AI Training & Consulting",
+      tagline: "Học AI vượt ra ngoài prompting.",
       summary:
-        "Workshop AI thực hành cho đội marketing in-house, xây dựng quanh chính công cụ, kênh và quy trình thực tế của bạn.",
-      why: "Công cụ không thay đổi đội ngũ, thói quen mới làm được. Trong hai giờ tập trung, marketer của bạn sẽ tạo ra prompt, quy trình và sản phẩm thật để dùng ngay sáng hôm sau.",
+        "Đào tạo AI thực hành cho cá nhân và tổ chức muốn vượt qua việc dùng tool cơ bản và xây dựng quy trình, hệ thống tự động hóa thực sự tạo ra năng suất lâu dài.",
+      why: "Hầu hết mọi người đã thử các công cụ AI. Ít ai biết cách ứng dụng chúng vào công việc thực tế. Chúng tôi tập trung vào xây dựng workflow, không chỉ viết prompt.",
       highlights: [
-        "Buổi thực hành trực tiếp 2 giờ",
-        "Tuỳ chỉnh theo kênh & công cụ của bạn",
-        "Thư viện prompt & quy trình tái sử dụng",
-        "Chỉ áp dụng tại Việt Nam",
+        "Ứng dụng vào công việc thực: content, nghiên cứu, marketing, vận hành và nhiều hơn nữa",
+        "Bao gồm thiết kế workflow, tự động hóa và AI agent, không chỉ prompting",
+        "Bài tập thực hành, demo và dự án thực tế",
+        "Xây dựng hệ thống tiếp tục tạo ra giá trị sau khi đào tạo kết thúc",
       ],
       deliverables: [
-        "Giáo trình workshop tuỳ chỉnh",
-        "Playbook prompt & tự động hoá",
-        "Bản ghi & bộ tài nguyên",
+        "Giáo trình đào tạo tùy chỉnh",
+        "Playbook workflow và tự động hóa",
+        "Bản ghi và bộ tài nguyên",
         "Hỗ trợ hỏi đáp sau buổi học",
       ],
-      pricing: {
-        price: "700.000₫",
-        unit: "mỗi người",
-        duration: "buổi 2 giờ",
-        note: "Đào tạo AI trực tiếp chỉ áp dụng tại Việt Nam.",
+      midCta: {
+        headline: "Đội của bạn có thể làm việc hiệu quả gấp đôi với AI. Hãy chứng minh điều đó.",
+        sub: "Đào tạo thực hành xây dựng xung quanh workflow thực tế của bạn, không phải prompt chung chung.",
       },
+      sectionsTitle: "Cách đào tạo diễn ra",
+      sections: [
+        {
+          title: "Đào tạo thực hành cho công việc thực tế",
+          body: [
+            "Hầu hết các khóa học AI tập trung vào lý thuyết hoặc công cụ đơn lẻ. Cách tiếp cận của chúng tôi tập trung vào ứng dụng thực tế. Học viên học cách AI có thể hỗ trợ công việc hàng ngày trong sáng tạo nội dung, nghiên cứu, marketing, vận hành, quản lý dự án, phát triển phần mềm và các quy trình kinh doanh.",
+            "Thay vì dạy một nền tảng duy nhất, chúng tôi giúp học viên hiểu cách các công cụ AI khác nhau có thể phối hợp để đạt được kết quả cụ thể. Mục tiêu là trở nên hiệu quả và có năng lực hơn trong thế giới ngày càng được thúc đẩy bởi AI.",
+          ],
+        },
+        {
+          title: "Vượt ra ngoài ChatGPT",
+          body: [
+            "Hệ sinh thái AI tiếp tục phát triển nhanh chóng với các nền tảng, mô hình và khả năng mới xuất hiện mỗi tháng. Chương trình đào tạo giúp học viên hiểu điểm mạnh và trường hợp sử dụng tốt nhất của các nền tảng AI hiện đại và cách kết hợp chúng thành quy trình hiệu quả.",
+            "Từ tạo nội dung và nghiên cứu đến lập trình, tự động hóa, phân tích dữ liệu và quản lý kiến thức, học viên học cách chọn đúng công cụ cho đúng nhiệm vụ trong khi tránh các lỗi và sự kém hiệu quả thường gặp.",
+          ],
+        },
+        {
+          title: "Xây dựng workflow, không chỉ prompt",
+          body: [
+            "Prompting chỉ là bước đầu tiên. Giá trị thực sự của AI đến từ việc thiết kế workflow kết nối các công cụ, tự động hóa quy trình và giảm công việc thủ công. Chương trình đào tạo bao gồm thiết kế workflow, nguyên tắc tự động hóa, hệ thống năng suất hỗ trợ AI, tích hợp API, AI agent và browser automation.",
+            "Học viên học cách nhiều công cụ có thể phối hợp để hỗ trợ nghiên cứu, sản xuất nội dung, chăm sóc khách hàng, vận hành nội bộ, báo cáo và các chức năng kinh doanh khác. Cách tiếp cận dựa trên hệ thống này tạo ra giá trị lớn hơn nhiều so với việc dùng AI như một chatbot đơn lẻ.",
+          ],
+        },
+        {
+          title: "Học qua thực hành",
+          body: [
+            "Cách học AI nhanh nhất là xây dựng. Mỗi chương trình đào tạo kết hợp bài tập thực hành, demo và dự án thực tế cho phép học viên áp dụng các khái niệm ngay lập tức.",
+            "Thay vì rời đi với một bộ sưu tập prompt, học viên rời đi với các workflow có thể tái sử dụng, hệ thống đang hoạt động và hiểu biết sâu hơn về cách tích hợp AI vào công việc hàng ngày. Cách tiếp cận thực hành này giúp tăng tốc độ áp dụng và xây dựng sự tự tin lâu dài.",
+          ],
+        },
+        {
+          title: "Được thiết kế cho áp dụng lâu dài",
+          body: [
+            "Triển khai AI thành công không phải về việc học một công cụ duy nhất hay làm theo danh sách prompt. Nó đòi hỏi hiểu cách con người, workflow và công nghệ làm việc cùng nhau. Chúng tôi giúp cá nhân và tổ chức xây dựng năng lực AI lâu dài tiếp tục tạo ra giá trị sau khi đào tạo kết thúc.",
+            "Dù bạn muốn cải thiện năng suất, tự động hóa workflow, tăng tốc sản xuất nội dung, tinh gọn vận hành hay xây dựng hệ thống AI, chúng tôi cung cấp kiến thức và kinh nghiệm thực hành để biến AI thành phần quan trọng trong công việc của bạn.",
+          ],
+        },
+      ],
+      faq: [
+        {
+          q: "Khóa đào tạo này dành cho ai?",
+          a: "Được thiết kế cho cá nhân và đội nhóm muốn vượt qua việc dùng AI cơ bản và phát triển kỹ năng AI ở cấp độ workflow. Bao gồm marketer, người tạo nội dung, chuyên gia vận hành, chủ doanh nghiệp, tư vấn viên và bất kỳ ai muốn sử dụng AI hiệu quả hơn trong công việc hàng ngày.",
+        },
+        {
+          q: "Học viên có cần kiến thức kỹ thuật không?",
+          a: "Không. Khóa đào tạo được thiết kế cho cả người không có nền tảng kỹ thuật lẫn người có kinh nghiệm thực hành. Chúng tôi tập trung vào ứng dụng thực tế thay vì lập trình hay khái niệm kỹ thuật. Học viên ở mọi cấp độ, từ người mới bắt đầu đến người dùng trung cấp, đều được hưởng lợi từ cách tiếp cận workflow-first.",
+        },
+        {
+          q: "Khóa đào tạo bao gồm những công cụ và nền tảng AI nào?",
+          a: "Chúng tôi bao gồm các nền tảng AI hiện đại như ChatGPT, Claude, Gemini và nhiều hơn, cùng với công cụ tự động hóa, AI agent, browser automation, tích hợp API và hệ thống quản lý kiến thức. Trọng tâm là cách các công cụ phối hợp với nhau hơn là bất kỳ nền tảng đơn lẻ nào.",
+        },
+        {
+          q: "Sự khác biệt giữa prompting và thiết kế workflow là gì?",
+          a: "Prompting là đặt câu hỏi hoặc giao nhiệm vụ cho AI. Thiết kế workflow có nghĩa là kết nối nhiều công cụ và bước để các quy trình chạy tự động hoặc bán tự động với ít công sức thủ công nhất. Kỹ năng ở cấp độ workflow tạo ra giá trị lớn hơn nhiều so với các prompt đơn lẻ.",
+        },
+        {
+          q: "Học viên có thể làm gì sau khi đào tạo?",
+          a: "Học viên rời đi với các workflow có thể tái sử dụng, hệ thống tự động hóa đang hoạt động và hiểu rõ cách áp dụng AI vào vai trò hoặc doanh nghiệp cụ thể của họ. Đào tạo là thực hành, vì vậy học viên xây dựng kết quả thực trong buổi học thay vì chỉ tiếp thu thông tin.",
+        },
+        {
+          q: "Khóa học có thể tùy chỉnh cho ngành hoặc đội nhóm cụ thể không?",
+          a: "Có. Mỗi chương trình được điều chỉnh theo vai trò, công cụ và bối cảnh kinh doanh của học viên. Chúng tôi xây dựng giáo trình xung quanh các trường hợp sử dụng thực tế từ tổ chức thay vì dùng ví dụ chung chung.",
+        },
+        {
+          q: "Mỗi buổi đào tạo kéo dài bao lâu?",
+          a: "Các buổi tiêu chuẩn là 2 giờ. Đối với đội nhóm cần bao quát rộng hơn nhiều chủ đề hoặc công cụ, các chương trình nhiều buổi có sẵn. Liên hệ chúng tôi để thảo luận về hình thức phù hợp cho đội nhóm của bạn.",
+        },
+        {
+          q: "Đào tạo có thể học trực tuyến hay chỉ trực tiếp?",
+          a: "Đào tạo trực tiếp hiện chỉ áp dụng tại Việt Nam. Liên hệ chúng tôi để thảo luận về tình trạng khả dụng ở các địa điểm khác hoặc các hình thức học từ xa.",
+        },
+        {
+          q: "Sau đào tạo thì sao?",
+          a: "Học viên nhận được bản ghi buổi học, playbook workflow và tự động hóa, cùng quyền truy cập hỗ trợ hỏi đáp sau đào tạo. Mục tiêu là đảm bảo các khái niệm được áp dụng trong môi trường làm việc thực tế, không chỉ được hiểu về mặt lý thuyết.",
+        },
+        {
+          q: "Làm thế nào để đặt lịch buổi học cho đội nhóm của tôi?",
+          a: "Liên hệ qua trang contact hoặc đặt lịch tư vấn. Chúng tôi sẽ thảo luận về mục tiêu của đội nhóm, mức độ sử dụng AI hiện tại và điều gì sẽ tạo ra tác động thực tế nhất, sau đó xây dựng chương trình xung quanh đó.",
+        },
+      ],
     },
   ],
 

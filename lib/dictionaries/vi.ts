@@ -811,11 +811,13 @@ export const vi: Dictionary = {
     founders: [
       {
         name: "Bella Ng",
+        avatar: "/Bella Ng.png",
         role: "Co-founder, Digital Marketing & AI",
         bio: "Hơn 10 năm kinh nghiệm về SEO, quảng cáo có phí, chiến lược nội dung và e-commerce. Đã dẫn dắt tăng trưởng cho các thương hiệu tại Úc và Việt Nam bao gồm AN Scent và Gateway Vietnam. Hiện tập trung vào thiết kế AI workflow, GEO và hệ thống nội dung cho doanh nghiệp đang phát triển.",
       },
       {
         name: "Jason T",
+        avatar: "/Jason-T.jpg",
         role: "Co-founder, Project Management & Operations",
         bio: "Nền tảng về quản lý dự án, vận hành và triển khai website, nội dung cho các thị trường từ Việt Nam, Úc, Châu Âu đến Mỹ, đa dạng lĩnh vực bao gồm Bán lẻ, SaaS và Tài chính. Ngoài ra còn có kinh nghiệm quản trị và phát triển web trên Shopify.",
       },

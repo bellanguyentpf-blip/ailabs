@@ -131,24 +131,21 @@ export default async function ServiceDetailPage({
       {/* Shopify flows */}
       {service.flows ? (
         <section className="border-t border-border">
-          <div className="container-editorial py-16 md:py-20">
-            <div className="flex flex-col gap-6">
-              <h2 className="font-display text-2xl font-medium">
+          <div className="container-editorial py-10 md:py-14">
+            <div className="flex flex-col gap-4">
+              <h2 className="font-display text-xl font-medium">
                 {dict.services.flowsTitle}
               </h2>
-              <div className="overflow-hidden rounded-xl border border-border">
+              <div className="overflow-hidden rounded-lg border border-border">
                 {service.flows.map((f, i) => (
                   <div
                     key={f.name}
-                    className={`grid items-center gap-4 p-5 sm:grid-cols-[1.2fr_2fr_auto] sm:p-6 ${
+                    className={`grid items-center gap-3 px-5 py-3.5 sm:grid-cols-[1.2fr_2fr] ${
                       i > 0 ? "border-t border-border" : ""
                     }`}
                   >
-                    <h3 className="font-display text-lg font-medium">{f.name}</h3>
+                    <h3 className="font-display text-base font-medium">{f.name}</h3>
                     <p className="text-sm text-muted-foreground">{f.scope}</p>
-                    <Badge variant="secondary" className="w-fit whitespace-nowrap font-mono">
-                      {f.estimate}
-                    </Badge>
                   </div>
                 ))}
               </div>
@@ -190,10 +187,15 @@ export default async function ServiceDetailPage({
         <div className="container-editorial py-12 md:py-16">
           <blockquote className="border-l-[3px] border-brand pl-6">
             <p className="font-display text-lg italic font-medium leading-snug md:text-xl">
-              &ldquo;AILABS rebuilt our site and content engine. Organic traffic more than doubled and we finally publish on schedule, every week.&rdquo;
+              {service.testimonial
+                ? <>&ldquo;{service.testimonial.quote}&rdquo;</>
+                : <>&ldquo;AILABS rebuilt our site and content engine. Organic traffic more than doubled and we finally publish on schedule, every week.&rdquo;</>
+              }
             </p>
             <footer className="mt-3">
-              <span className="text-sm text-muted-foreground">— Linh Tran</span>
+              <span className="text-sm text-muted-foreground">
+                {service.testimonial ? service.testimonial.author : "Linh Tran"}
+              </span>
             </footer>
           </blockquote>
         </div>
@@ -231,9 +233,9 @@ export default async function ServiceDetailPage({
                 Ready to see this applied to your business?
               </p>
               <Button asChild size="lg" className="group h-11 shrink-0 px-6">
-                <Link href={localeHref(lang, "/contact")}>
-                  Get a free audit
-                                  </Link>
+                <Link href={localeHref(lang, service.sectionsCta?.href ?? "/contact")}>
+                  {service.sectionsCta?.label ?? "Get a free audit"}
+                </Link>
               </Button>
             </div>
           </div>

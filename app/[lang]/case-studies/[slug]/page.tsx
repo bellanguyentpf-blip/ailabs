@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 import { ArrowRight } from "lucide-react"
@@ -39,32 +40,52 @@ export default async function CaseStudyDetailPage({
   const index = dict.caseStudiesList.findIndex((c) => c.slug === slug)
   if (index === -1) notFound()
   const cs = dict.caseStudiesList[index]
-  const next =
-    dict.caseStudiesList[(index + 1) % dict.caseStudiesList.length]
+  const next = dict.caseStudiesList[(index + 1) % dict.caseStudiesList.length]
 
   return (
     <>
-      {/* Hero */}
-      <section className="border-b border-border">
-        <div className="container-editorial py-16 md:py-24">
-          <Reveal className="flex flex-col gap-6">
-            <div className="flex items-center gap-4">
-              <span className="flex size-16 items-center justify-center rounded-2xl bg-primary font-display text-2xl font-semibold text-primary-foreground">
+      {/* ── Hero ─────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden border-b border-border bg-background">
+        {/* Ghost monogram watermark */}
+        <span
+          aria-hidden
+          className="pointer-events-none absolute -right-6 top-0 select-none font-display font-bold leading-none text-[32vw] text-foreground/[0.035] md:text-[22vw]"
+        >
+          {cs.monogram}
+        </span>
+
+        <div className="container-editorial relative py-20 md:py-32">
+          <Reveal className="flex flex-col gap-8">
+            {/* Meta row */}
+            <div className="flex items-center gap-3">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-primary font-mono text-[10px] font-bold tracking-wider text-primary-foreground">
                 {cs.monogram}
               </span>
-              <span className="font-mono text-sm text-muted-foreground">
-                {cs.sector} · {cs.year}
+              <span className="h-px w-6 bg-border" />
+              <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
+                {cs.sector}
               </span>
+              <span className="font-mono text-xs text-muted-foreground/40">{cs.year}</span>
             </div>
-            <h1 className="max-w-3xl font-display text-4xl leading-[1.05] font-medium text-balance md:text-6xl">
+
+            {/* Client name */}
+            <h1 className="max-w-4xl font-display text-5xl font-medium leading-[1.02] text-balance md:text-7xl lg:text-[5.5rem]">
               {cs.client}
             </h1>
-            <p className="max-w-2xl text-lg text-muted-foreground text-pretty md:text-xl">
+
+            {/* Summary */}
+            <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty md:text-xl">
               {cs.summary}
             </p>
+
+            {/* Service tags */}
             <div className="flex flex-wrap gap-2 pt-1">
               {cs.services.map((tag) => (
-                <Badge key={tag} variant="outline" className="font-normal">
+                <Badge
+                  key={tag}
+                  variant="outline"
+                  className="rounded-full px-4 py-1 font-mono text-xs tracking-wide font-normal"
+                >
                   {tag}
                 </Badge>
               ))}
@@ -73,61 +94,107 @@ export default async function CaseStudyDetailPage({
         </div>
       </section>
 
-      {/* Results band */}
-      <section className="border-b border-border bg-card">
-        <div className="container-editorial py-12 md:py-16">
-          <dl className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-3">
-            {cs.results.map((r) => (
-              <div key={r.label} className="flex flex-col gap-1 bg-background p-7">
-                <dt className="font-display text-5xl font-medium text-brand">
-                  {r.metric}
-                </dt>
-                <dd className="text-sm text-muted-foreground">{r.label}</dd>
-              </div>
+      {/* ── Results — inverted black band ────────────────────── */}
+      <section className="bg-primary text-primary-foreground">
+        <div className="container-editorial py-16 md:py-24">
+          <Reveal>
+            <p className="mb-10 font-mono text-[10px] tracking-widest text-primary-foreground/30 uppercase">
+              {dict.caseStudies.resultsTitle}
+            </p>
+            <dl className={`grid grid-cols-2 gap-x-6 gap-y-0 ${cs.results.length === 4 ? "sm:grid-cols-2" : "sm:grid-cols-3"}`}>
+              {cs.results.map((r) => (
+                <div
+                  key={r.label}
+                  className="flex flex-col gap-2 border-t border-primary-foreground/[0.08] py-8"
+                >
+                  <dt className="font-display text-4xl font-medium leading-none text-brand md:text-5xl">
+                    {r.metric}
+                  </dt>
+                  <dd className="text-xs text-primary-foreground/45 leading-relaxed">{r.label}</dd>
+                </div>
+              ))}
+            </dl>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Challenge + Solution — editorial row layout ──────── */}
+      <section className="border-b border-border bg-background">
+        <div className="container-editorial py-20 md:py-28">
+          <div className="divide-y divide-border">
+            {[
+              { no: "01", title: dict.caseStudies.challengeTitle, body: cs.challenge, delay: 0 },
+              { no: "02", title: dict.caseStudies.solutionTitle, body: cs.solution, delay: 80 },
+            ].map(({ no, title, body, delay }) => (
+              <Reveal key={no} delay={delay}>
+                <div className="grid gap-4 py-12 md:grid-cols-[5rem_1fr_2fr] md:gap-16 md:py-16 md:items-start">
+                  <span className="font-mono text-5xl font-bold leading-none text-brand/[0.18] md:text-6xl">
+                    {no}
+                  </span>
+                  <h2 className="font-display text-2xl font-medium md:text-3xl md:pt-1">
+                    {title}
+                  </h2>
+                  <p className="text-base leading-relaxed text-muted-foreground text-pretty md:text-lg">
+                    {body}
+                  </p>
+                </div>
+              </Reveal>
             ))}
-          </dl>
+          </div>
         </div>
       </section>
 
-      {/* Challenge + Solution */}
-      <section className="container-editorial py-16 md:py-24">
-        <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-          <Reveal className="flex flex-col gap-4">
-            <h2 className="font-display text-2xl font-medium">
-              {dict.caseStudies.challengeTitle}
-            </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
-              {cs.challenge}
-            </p>
-          </Reveal>
-          <Reveal delay={80} className="flex flex-col gap-4">
-            <h2 className="font-display text-2xl font-medium">
-              {dict.caseStudies.solutionTitle}
-            </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground text-pretty">
-              {cs.solution}
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      {/* ── Image gallery ────────────────────────────────────── */}
+      {cs.images && cs.images.length > 0 && (
+        <section className="border-b border-border bg-card">
+          <div className="container-editorial py-16 md:py-20">
+            <div className={`grid gap-5 ${cs.images.length === 1 ? "" : "md:grid-cols-2"}`}>
+              {cs.images.map((img) => (
+                <Reveal key={img.src}>
+                  <div className="overflow-hidden rounded-xl border border-border">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={1200}
+                      height={800}
+                      className="w-full object-cover"
+                    />
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
-      {/* Next case study */}
-      <section className="border-t border-border">
+      {/* ── Next case study — full-bleed teaser ──────────────── */}
+      <section className="bg-background">
         <Link
           href={localeHref(lang, `/case-studies/${next.slug}`)}
-          className="group block"
+          className="group relative block overflow-hidden"
         >
-          <div className="container-editorial flex items-center justify-between gap-6 py-12 md:py-16">
-            <div className="flex flex-col gap-2">
-              <span className="text-sm text-muted-foreground">
+          {/* Ghost monogram for next client */}
+          <span
+            aria-hidden
+            className="pointer-events-none absolute -bottom-10 -right-4 select-none font-display font-bold leading-none text-[22vw] text-foreground/[0.03]"
+          >
+            {next.monogram}
+          </span>
+
+          <div className="container-editorial relative flex items-center justify-between gap-8 border-t border-border py-16 md:py-24">
+            <div className="flex flex-col gap-3">
+              <span className="font-mono text-[10px] tracking-widest text-muted-foreground/50 uppercase">
                 {dict.caseStudies.nextLabel}
               </span>
-              <h2 className="font-display text-3xl font-medium transition-colors group-hover:text-brand md:text-5xl">
+              <h2 className="font-display text-4xl font-medium leading-tight transition-colors duration-300 group-hover:text-brand md:text-6xl">
                 {next.client}
               </h2>
+              <p className="max-w-sm text-sm text-muted-foreground opacity-0 transition-all duration-300 group-hover:opacity-100">
+                {next.summary}
+              </p>
             </div>
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-all group-hover:border-brand group-hover:bg-brand group-hover:text-brand-foreground md:size-14">
-              <ArrowRight className="size-5" />
+            <span className="flex size-14 shrink-0 items-center justify-center rounded-full border border-border text-muted-foreground transition-all duration-300 group-hover:border-brand group-hover:bg-brand group-hover:text-primary-foreground md:size-16">
+              <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-0.5" />
             </span>
           </div>
         </Link>

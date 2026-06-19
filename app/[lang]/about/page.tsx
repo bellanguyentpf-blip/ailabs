@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { notFound } from "next/navigation"
 
 import { PageHero } from "@/components/site/page-hero"
@@ -55,6 +56,48 @@ export default async function AboutPage({
           </Reveal>
         </div>
       </section>
+
+      {/* Founders */}
+      {about.founders && (
+        <section className="border-t border-border bg-card">
+          <div className="container-editorial py-16 md:py-20">
+            <h2 className="font-display text-2xl font-medium mb-10">
+              {about.foundersTitle}
+            </h2>
+            <div className="grid gap-6 sm:grid-cols-2">
+              {about.founders.map((f) => (
+                <div key={f.name} className="card-elevated overflow-hidden flex flex-col">
+                  {f.avatar ? (
+                    <div className="p-8 pb-0">
+                      <div className="relative size-40 overflow-hidden rounded-xl bg-muted">
+                        <Image
+                          src={f.avatar}
+                          alt={f.name}
+                          fill
+                          className="object-cover object-top"
+                        />
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="p-8 pb-0">
+                      <div className="size-40 rounded-xl bg-muted flex items-center justify-center font-display text-4xl font-medium text-muted-foreground/30">
+                        {f.name.charAt(0)}
+                      </div>
+                    </div>
+                  )}
+                  <div className="flex flex-col gap-3 p-8">
+                    <div>
+                      <p className="font-display text-2xl font-medium">{f.name}</p>
+                      <p className="text-sm text-brand mt-1">{f.role}</p>
+                    </div>
+                    <p className="text-muted-foreground text-pretty leading-relaxed">{f.bio}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Stats */}
       <section className="border-y border-border bg-card">

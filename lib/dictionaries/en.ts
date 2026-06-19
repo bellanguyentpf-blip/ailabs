@@ -23,6 +23,8 @@ export type Service = {
   sectionsTitle?: string
   sections?: ServiceSection[]
   faq?: ServiceFaq[]
+  testimonial?: { quote: string; author: string }
+  sectionsCta?: { label: string; href: string }
 }
 export type CaseStudy = {
   slug: string
@@ -35,6 +37,7 @@ export type CaseStudy = {
   solution: string
   services: string[]
   results: { metric: string; label: string }[]
+  images?: { src: string; alt: string }[]
 }
 export type BlogPost = {
   slug: string
@@ -93,8 +96,8 @@ export const en = {
       name: "AI Website Development",
       tagline: "Websites Built for Search, Speed, and Growth",
       summary:
-        "We design websites that attract qualified traffic, convert visitors into leads, and grow with your business. AI-powered production means faster launches without sacrificing quality.",
-      why: "Most websites are brochures. We build websites as growth systems: fast, semantic, and structured so both people and AI search engines understand and recommend you.",
+        "We create websites that actually work for your business, attracting the right visitors, turning them into leads, and scaling as you grow. Our AI-powered process gets you launched faster without cutting corners on quality.",
+      why: "Most websites just sit there as digital brochures. We build websites that function as growth systems: fast, semantically clear, and structured so both people and AI search engines can find and recommend you.",
       highlights: [
         "AI-assisted copy & content modeling tuned to your funnel",
         "Headless, Core-Web-Vitals-perfect builds (Next.js)",
@@ -138,7 +141,7 @@ export const en = {
           title: "Built for Modern Search",
           body: [
             "Customers now find businesses through ChatGPT, Gemini, and Perplexity, not just Google. Visibility requires more than traditional SEO.",
-            "Every site we build is structured for SEO, AEO, and GEO from day one. Content architecture, schema, metadata, and technical performance are built in, not bolted on.",
+            "Every site we build is structured for SEO, AEO, and GEO from day one. Content architecture, schema, metadata, and technical performance are built in, not bolted on later.",
           ],
         },
         {
@@ -158,7 +161,7 @@ export const en = {
         {
           title: "A Long-Term Digital Asset",
           body: [
-            "Most sites become a maintenance burden within a year. Ours do not.",
+            "Most sites become a maintenance burden within a year. Our clients' sites don't.",
             "We structure every website for content expansion, campaign support, and future development. Clean code, scalable design systems, and clear documentation keep your site working for you long after launch.",
           ],
         },
@@ -213,8 +216,8 @@ export const en = {
       name: "SEO & AI Search Visibility",
       tagline: "Get found by Google, and by AI.",
       summary:
-        "Rank in classic search and become the cited source inside ChatGPT, Perplexity, Gemini and AI Overviews (GEO/AEO).",
-      why: "Search is splitting in two: blue links and AI answers. We optimise for both, technical SEO plus Generative Engine Optimization so your brand is the answer, not a footnote.",
+        "We help your business rank on Google and get recommended inside ChatGPT, Perplexity and Gemini. One strategy covering technical SEO, content, topical authority and Generative Engine Optimization.",
+      why: "Search is splitting in two: blue links and AI answers. We optimize for both, technical SEO plus Generative Engine Optimization so your brand is the answer, not a footnote.",
       highlights: [
         "Technical SEO audit & Core Web Vitals fixes",
         "Generative Engine Optimization (GEO/AEO)",
@@ -229,14 +232,14 @@ export const en = {
       ],
       midCta: {
         headline: "More traffic. More leads. Visible on Google and AI search.",
-        sub: "Your competitors are optimising for both. Let's make sure you are too.",
+        sub: "Your competitors are optimizing for both. Let's make sure you are too.",
       },
       sectionsTitle: "How we approach SEO and AI search",
       sections: [
         {
           title: "Get Found Where Customers Search Today",
           body: [
-            "Search is no longer limited to Google. Potential customers now discover businesses through ChatGPT, Gemini, Perplexity, and a growing number of AI-powered search experiences.",
+            "Search isn't just Google anymore. Your potential customers are discovering businesses through ChatGPT, Gemini, Perplexity, and a growing number of AI-powered search experiences.",
             "We help businesses improve visibility across both traditional search engines and emerging AI discovery platforms through a combined SEO, AEO, and GEO strategy. The goal is not simply to rank higher. It is to ensure your brand appears wherever customers are looking for answers.",
           ],
         },
@@ -251,7 +254,7 @@ export const en = {
           title: "Built for SEO and AI Search",
           body: [
             "Modern search engines increasingly reward expertise, authority, and topical depth. Our content strategy is structured around pillar pages, topic clusters, supporting content, and entity-based optimization to strengthen visibility across both search engines and AI systems.",
-            "Every content asset is created with a dual purpose: helping search engines understand your expertise while providing genuinely useful information for potential customers.",
+            "Every content asset has a dual purpose: helping search engines understand your expertise while providing genuinely useful information for potential customers.",
           ],
         },
         {
@@ -332,6 +335,10 @@ export const en = {
           a: "Most SEO agencies optimize for Google alone. We build strategies that cover traditional SEO alongside AI search visibility, which is where a growing share of buying decisions now begin. Combined with in-house content production and transparent reporting, this gives clients a more complete and future-ready search strategy.",
         },
       ],
+      testimonial: {
+        quote: "We were stuck on page three for every keyword that mattered. Six months in, we rank first for most of them and our brand is showing up inside ChatGPT and Perplexity. Inbound leads are up significantly.",
+        author: "Nam Hoang",
+      },
     },
     {
       slug: "ai-content-marketing",
@@ -341,7 +348,7 @@ export const en = {
       tagline: "A complete content team without the overhead.",
       summary:
         "We act as an extension of your team, producing written content, visual assets and marketing materials that build visibility, trust and demand across every channel.",
-      why: "Most teams don't have the time or resources to publish at the pace modern marketing requires. We combine human creativity with AI-powered workflows to handle the full content operation: planning, writing, design, publishing and optimisation.",
+      why: "Most teams don't have the time or resources to publish at the pace modern marketing requires. We combine human creativity with AI-powered workflows to handle the full content operation: planning, writing, design, publishing and optimization.",
       highlights: [
         "Website content: service pages, landing pages, case studies and blog",
         "Social content tailored to your brand, industry and audience",
@@ -359,6 +366,10 @@ export const en = {
       midCta: {
         headline: "Content that builds pipeline. Published on schedule, every week.",
         sub: "Stop pushing content to tomorrow. Let's build your system.",
+      },
+      testimonial: {
+        quote: "We went from posting whenever we had time to a full content calendar shipped every week. Blog traffic compounded month over month and we started getting inbound leads we had never seen before.",
+        author: "Marketing Manager, E-commerce Brand",
       },
       sectionsTitle: "What we produce and how",
       sections: [
@@ -387,7 +398,7 @@ export const en = {
           title: "Built for SEO, GEO and AI search",
           body: [
             "Modern content needs to perform across more than just Google. Our content strategies support traditional SEO while also improving visibility across AI-powered discovery platforms such as ChatGPT, Gemini and Perplexity.",
-            "By combining content strategy, search optimisation and topical authority development, we help businesses increase visibility wherever customers are searching for information.",
+            "By combining content strategy, search optimization and topical authority development, we help businesses increase visibility wherever customers are searching for information.",
           ],
         },
         {
@@ -401,7 +412,7 @@ export const en = {
       faq: [
         {
           q: "What does AI Content and Creative Production include?",
-          a: "It covers the full content production process: strategy, writing, visual design, publishing and optimisation. We handle website copy, blog articles, social content, campaign assets and supporting creative, all produced as a coordinated system.",
+          a: "It covers the full content production process: strategy, writing, visual design, publishing and optimization. We handle website copy, blog articles, social content, campaign assets and supporting creative, all produced as a coordinated system.",
         },
         {
           q: "How is this different from hiring a freelance writer or designer?",
@@ -421,7 +432,7 @@ export const en = {
         },
         {
           q: "What is GEO and how does it differ from SEO?",
-          a: "SEO optimises content for traditional search engines like Google. GEO (Generative Engine Optimisation) structures content so it is cited and surfaced by AI-powered tools such as ChatGPT, Perplexity and Google AI Overviews. We build content strategies that address both.",
+          a: "SEO optimizes content for traditional search engines like Google. GEO (Generative Engine Optimization) structures content so it is cited and surfaced by AI-powered tools such as ChatGPT, Perplexity and Google AI Overviews. We build content strategies that address both.",
         },
         {
           q: "How much content can you produce each month?",
@@ -458,8 +469,8 @@ export const en = {
         "AI-powered workflows for future-ready ecommerce operations",
       ],
       deliverables: [
-        "Store development and theme customisation",
-        "Conversion rate optimisation audit and implementation",
+        "Store development and theme customization",
+        "Conversion rate optimization audit and implementation",
         "Marketing automation flows and sequences",
         "Dedicated landing page system",
         "Post-launch growth strategy and reporting",
@@ -577,6 +588,10 @@ export const en = {
           a: "Yes. Our role extends beyond development. We work with brands on an ongoing basis to monitor store performance, run optimization tests, improve automation flows and identify growth opportunities as the business evolves.",
         },
       ],
+      testimonial: {
+        quote: "Our store looked outdated and the checkout was losing people. AILABS rebuilt it from the ground up. Conversion rate went up noticeably in the first month and the store finally reflects the brand we actually are.",
+        author: "Alice L",
+      },
     },
     {
       slug: "ai-training",
@@ -585,7 +600,7 @@ export const en = {
       name: "AI Training & Consulting",
       tagline: "Learn AI beyond prompting.",
       summary:
-        "Practical AI training for individuals and organizations who want to move beyond basic tools and build real workflows, automation systems and lasting productivity.",
+        "Practical AI training for teams and individuals who want to move beyond basic prompting and build real workflows, custom AI agents and automation systems that create lasting productivity.",
       why: "Most people have tried AI tools. Few know how to make them work for their actual job. We focus on building workflows, not just prompts.",
       highlights: [
         "Applied to real work: content, research, marketing, operations and more",
@@ -610,13 +625,6 @@ export const en = {
           body: [
             "Most AI courses focus on theory or isolated tools. Our approach focuses on practical application. Participants learn how AI can support everyday work across content creation, research, marketing, operations, project management, software development and business processes.",
             "Rather than teaching a single platform, we help participants understand how different AI tools can work together to achieve specific outcomes. The goal is to become more productive, more efficient and more capable in an AI-powered world.",
-          ],
-        },
-        {
-          title: "Beyond ChatGPT",
-          body: [
-            "The AI ecosystem continues to evolve rapidly, with new platforms, models and capabilities emerging every month. Our training helps participants understand the strengths and best use cases of modern AI platforms and how they can be combined into effective workflows.",
-            "From content creation and research to coding, automation, data analysis and knowledge management, participants learn how to select the right tools for the right tasks while avoiding common mistakes and inefficiencies.",
           ],
         },
         {
@@ -663,8 +671,8 @@ export const en = {
           a: "Participants leave with repeatable workflows, working automation systems and a clear understanding of how to apply AI to their specific role or business. The training is practical, so participants build real outputs during the session rather than just absorbing information.",
         },
         {
-          q: "Can the training be customised for a specific industry or team?",
-          a: "Yes. Every program is tailored to the participants' roles, tools and business context. We build the curriculum around real use cases from the organisation rather than using generic examples.",
+          q: "Can the training be customized for a specific industry or team?",
+          a: "Yes. Every program is tailored to the participants' roles, tools and business context. We build the curriculum around real use cases from the organization rather than using generic examples.",
         },
         {
           q: "How long is a training session?",
@@ -683,6 +691,11 @@ export const en = {
           a: "Get in touch through our contact page or book a discovery call. We'll discuss your team's goals, current AI usage and what would make the most practical impact, then build a program around that.",
         },
       ],
+      testimonial: {
+        quote: "Our team had tried AI tools before but never made them stick. After one session with AILABS, we had actual systems in place. The productivity shift was immediate.",
+        author: "Tran Bao Chau, Head of Operations",
+      },
+      sectionsCta: { label: "Contact us", href: "/contact" },
     },
   ] as Service[]),
 
@@ -690,59 +703,69 @@ export const en = {
   caseStudiesList: ([
     {
       slug: "fishbone",
-      client: "Fishbone",
-      monogram: "FB",
-      sector: "F&B / Hospitality",
-      year: "2024",
+      client: "Australian Merchandise Brand",
+      monogram: "AU",
+      sector: "E-commerce / Merchandise",
+      year: "2023–2024",
       summary:
-        "Rebuilt the digital presence and content engine for a fast-growing hospitality brand.",
+        "Scaled an Australian Shopify merchandise store with a 100,000+ subscriber database, generating AUD 158,500 from EDM alone in 5 months and a 10x return on Google Ads spend.",
       challenge:
-        "Fishbone had strong demand but a slow, hard-to-update site and inconsistent content output.",
+        "A Shopify merchandise store in Australia had a large subscriber database but no structured paid or email channel to consistently convert that audience into revenue.",
       solution:
-        "A headless website plus an AI content pipeline that keeps menus, stories and promotions fresh across channels.",
-      services: ["AI Website Development", "AI Content Marketing"],
+        "A dual-channel program: Google Ads campaigns that returned 10x the ad spend in Q1 2024 across 134,200 impressions and a 3.37% conversion rate, paired with Klaviyo EDM sequences that generated AUD 158,500 across 1,023 orders in the final 5 months of 2023.",
+      services: ["Google Ads", "Email Marketing"],
       results: [
-        { metric: "2.4×", label: "Organic traffic" },
-        { metric: "-58%", label: "Page load time" },
-        { metric: "4×", label: "Content output" },
+        { metric: "10x", label: "Return on ad spend" },
+        { metric: "3.37%", label: "Google Ads conversion rate" },
+        { metric: "134,200", label: "Ad impressions" },
+        { metric: "AUD 158k", label: "EDM revenue in 5 months" },
+        { metric: "1,023", label: "Orders from email" },
+        { metric: "30%", label: "Email open rate" },
       ],
     },
     {
       slug: "cbl",
-      client: "CBL",
-      monogram: "CB",
-      sector: "B2B Services",
+      client: "US Shopify Store",
+      monogram: "US",
+      sector: "E-commerce / SEO",
       year: "2024",
       summary:
-        "Turned a static corporate site into a lead-generating, search-optimised platform.",
+        "Took a US Shopify store from near-zero organic presence to 30.7K indexed keywords, a 98 on-page SEO score and 4.9K backlinks through a structured SEO and content program.",
       challenge:
-        "CBL ranked for almost nothing and relied entirely on referrals for new business.",
+        "The store had solid products but minimal organic presence. It depended on paid traffic with no content engine, a weak backlink profile and no internal linking structure to distribute authority across category pages. SEO issues across the site were high and unaddressed.",
       solution:
-        "Technical SEO overhaul, topical content map and an AI-assisted publishing cadence.",
-      services: ["SEO & AI Search", "AI Website Development"],
+        "A full SEO engagement: technical audit that reduced SEO issues by 36.8%, keyword research and on-page optimization across all product and category pages, weekly blog and article content targeting buyer-intent queries, a backlink acquisition program that built 4.9K backlinks, and internal linking architecture to distribute authority. Result: a 98 on-page SEO score, 30.7K organic keywords indexed, and 87 tracked keywords moving up in rankings.",
+      services: ["SEO & AI Search", "Content Marketing"],
       results: [
-        { metric: "Top 3", label: "For core keywords" },
-        { metric: "3.1×", label: "Qualified leads" },
-        { metric: "+180%", label: "Search impressions" },
+        { metric: "98", label: "On-page SEO score" },
+        { metric: "30.7K", label: "Organic keywords indexed" },
+        { metric: "4.9K", label: "Backlinks built" },
+        { metric: "87", label: "Tracked keywords ranked up" },
+        { metric: "36.8%", label: "Reduction in SEO issues" },
       ],
     },
     {
       slug: "beauty-by-hien",
-      client: "Beauty by Hien",
-      monogram: "BH",
-      sector: "Beauty / E-commerce",
-      year: "2023",
+      client: "US Fintech Platform",
+      monogram: "FT",
+      sector: "Fintech / Web",
+      year: "2024",
       summary:
-        "Designed and built a Shopify storefront with conversion flows that scale.",
+        "Built a complete fintech website for the US market in 3 weeks from scratch, then launched a programmatic SEO program that generated 50,000+ content pages and grew organic traffic 5x within 3 months.",
       challenge:
-        "A growing beauty brand stuck on a generic template with a leaky checkout.",
+        "A US fintech company needed a fully functional, conversion-optimized website live in 3 weeks with no existing design system, no content infrastructure and a hard launch deadline. The business also needed organic traffic at scale to reduce reliance on paid acquisition.",
       solution:
-        "Custom Shopify theme, optimised checkout and upsell flows, plus retention email automation.",
-      services: ["Shopify Development", "AI Content Marketing"],
+        "A parallel build: design system, information architecture and all core pages were developed simultaneously in 3 weeks. Customer journey mapping and tracking were embedded from day one to optimize lead conversion. Post-launch, a programmatic SEO program generated over 50,000 content pages targeting high-intent financial queries across the US market. Organic traffic grew 5x within 3 months of launch.",
+      services: ["AI Website Development", "SEO & AI Search"],
       results: [
-        { metric: "+46%", label: "Conversion rate" },
-        { metric: "+32%", label: "Average order value" },
-        { metric: "2.2×", label: "Returning customers" },
+        { metric: "5x", label: "Organic traffic growth in 3 months" },
+        { metric: "50K+", label: "Programmatic SEO pages created" },
+        { metric: "3 weeks", label: "Full website delivered from scratch" },
+        { metric: "Day 1", label: "Conversion tracking and journey analytics live" },
+      ],
+      images: [
+        { src: "/seo-service.png", alt: "SEO service dashboard showing organic growth" },
+        { src: "/programaticseo.png", alt: "Programmatic SEO pages at scale" },
       ],
     },
   ] as CaseStudy[]),
@@ -777,7 +800,7 @@ export const en = {
     servicesSection: {
       eyebrow: "What we do",
       title: "Services engineered for the AI era",
-      desc: "Five focused offerings that take you from invisible to inevitable.",
+      desc: "Website development, SEO and AI search visibility, content production, Shopify growth, and AI training. Five services that work together to build a business people can find, trust, and buy from.",
     },
     process: {
       eyebrow: "How we work",
@@ -801,7 +824,7 @@ export const en = {
         {
           no: "04",
           title: "Grow",
-          desc: "We measure, optimise and compound results month after month.",
+          desc: "We measure, optimize and compound results month after month.",
         },
       ],
     },
@@ -817,7 +840,7 @@ export const en = {
       items: [
         {
           quote:
-            "AILABS rebuilt our site and content engine. Organic traffic more than doubled and we finally publish on schedule, every week.",
+            "AILABS rebuilt our site and content engine. Our organic traffic more than doubled, and we finally publish on schedule every week.",
           name: "Linh Tran",
           role: "Founder, Fishbone",
         },
@@ -846,7 +869,7 @@ export const en = {
   services: {
     eyebrow: "Services",
     title: "Everything you need to grow in the AI era",
-    desc: "From your website to your search visibility to your content engine, and the training to run it all in-house.",
+    desc: "Website development, SEO and AI search visibility, content production, Shopify growth, and AI training. Everything a growing business needs to be found and convert.",
     whyTitle: "Why",
     deliverablesTitle: "What you get",
     flowsTitle: "Flows & estimates",
@@ -876,7 +899,7 @@ export const en = {
     tiers: ([
       {
         name: "Website",
-        startingAt: "Contact us",
+        startingAt: "From $600",
         forWho: "Brands that need a fast, conversion-first, AI-ready site.",
         includes: [
           "UX, design system & build",
@@ -887,7 +910,7 @@ export const en = {
       },
       {
         name: "Search & Content",
-        startingAt: "Contact us",
+        startingAt: "From $300 / mo",
         forWho: "Teams who want to rank on Google and get cited by AI.",
         includes: [
           "Technical SEO + GEO/AEO",
@@ -899,7 +922,7 @@ export const en = {
       },
       {
         name: "Commerce",
-        startingAt: "Contact us",
+        startingAt: "From $600",
         forWho: "Shopify brands scaling revenue and retention.",
         includes: [
           "Per-flow scope & estimate",
@@ -913,9 +936,9 @@ export const en = {
       eyebrow: "Team enablement",
       title: "AI training for your marketing team",
       desc: "A hands-on, 2-hour session built around your real tools, so your team ships with AI the next day.",
-      price: "700,000₫",
-      unit: "per person",
-      duration: "2-hour session",
+      price: "$20",
+      unit: "per hour",
+      duration: "minimum 2-hour session",
       note: "On-site AI training available in Vietnam only.",
       cta: "Book a session",
     },
@@ -955,41 +978,58 @@ export const en = {
   // ── ABOUT ──────────────────────────────────────────────────
   about: {
     eyebrow: "About AILABS",
-    title: "A decade of building things that get found.",
-    lead: "AILABS is a small, senior team that has spent 10+ years at the intersection of design, search and automation, now pointed squarely at the AI era.",
+    title: "Built by marketers who went all-in on AI.",
+    lead: "Bella and Jason bring over a decade of digital marketing and e-commerce experience, working with brands across Vietnam, Australia and beyond. AILABS is what they built when they decided to go all-in on AI.",
     story: [
-      "We started building websites long before \"AI\" was on every slide. That decade taught us what actually moves the needle: speed, clarity, structure, and content people (and now machines) trust.",
-      "Today we combine that craft with AI, not as a gimmick, but as leverage. We help brands get discovered in Google and inside AI answer engines, and we build the systems that keep them there.",
-      "We work lean and senior. No account-manager telephone game, you talk to the people doing the work.",
+      "Ten years in digital marketing teaches you what actually moves the needle. SEO, paid media, Shopify, content operations. We did all of it, hands-on, for real businesses with real targets.",
+      "When AI matured past the hype, we didn't just bolt it onto our existing workflow. We rebuilt around it. Custom AI agents scoped to specific business processes. Automated workflows that research, write and publish on a schedule. Knowledge systems in Obsidian that keep teams aligned without the chaos of scattered docs and endless catch-ups.",
+      "AILABS exists for startups and small-to-medium businesses that want AI to actually work inside their operation, not a generic toolkit dropped in their lap. We map your processes first, then build the systems that fit. The result is automation that compounds over time instead of collecting dust.",
+      "Beyond the two of us, we work with a professional support team brought in across projects: creative designers, UI/UX specialists, and an IT team capable of working across multiple languages and tech stacks. The right people for the right project, every time.",
+      "You talk to the people doing the work. No account managers, no handoffs, no surprises.",
+    ],
+    foundersTitle: "The founders",
+    founders: [
+      {
+        name: "Bella Ng",
+        avatar: "/Bella Ng.png",
+        role: "Co-founder, Digital Marketing & AI",
+        bio: "10+ years across SEO, paid media, content strategy and e-commerce. Led growth for brands in Australia and Vietnam including AN Scent and Gateway Vietnam. Now focused on AI workflow design, GEO and content systems for growing businesses.",
+      },
+      {
+        name: "Jason T",
+        avatar: "/Jason-T.jpg",
+        role: "Co-founder, Project Management & Operations",
+        bio: "Background in project management, operations and website and content delivery for markets across Vietnam, Australia, Europe and the US, spanning Retail, SaaS and Finance. Also brings hands-on experience managing and developing stores on Shopify.",
+      },
     ],
     statsTitle: "By the numbers",
     stats: [
-      { value: "10+", label: "Years of experience" },
+      { value: "10+", label: "Years in digital marketing" },
       { value: "50+", label: "Projects delivered" },
-      { value: "Global", label: "Service delivery" },
-      { value: "100%", label: "Senior team" },
+      { value: "SMB", label: "Our focus: startups and growing businesses" },
+      { value: "100%", label: "Senior, no juniors" },
     ],
-    valuesTitle: "How we operate",
+    valuesTitle: "How we work",
     values: [
       {
-        title: "Outcomes over output",
-        desc: "We measure success in traffic, leads and revenue, not deliverables shipped.",
+        title: "Workflows first, tools second",
+        desc: "We map your processes before touching any software. The right AI agent in the wrong workflow just automates the problem.",
       },
       {
-        title: "AI as leverage",
-        desc: "We use AI to do more, faster, always with a human editor accountable for quality.",
+        title: "Agents built for your business",
+        desc: "Off-the-shelf AI gives generic results. We scope and build agents around your specific operations, language and goals.",
       },
       {
-        title: "Radical clarity",
-        desc: "Clear scope, clear estimates, clear reporting. You always know where things stand.",
+        title: "Knowledge that compounds",
+        desc: "We set up structured knowledge systems so your business context, decisions and playbooks don't live inside one person's head.",
       },
       {
         title: "Built to be found",
-        desc: "Everything we make is engineered for discovery, by people and by AI.",
+        desc: "Every site and content system we produce is engineered for discovery, by people and by AI search engines.",
       },
     ],
-    ctaTitle: "Want the senior team on your project?",
-    ctaDesc: "Tell us what you're building. We'll tell you how we'd grow it.",
+    ctaTitle: "Want AI that actually fits your business?",
+    ctaDesc: "Tell us how you work today. We'll show you where AI can compound your results.",
   },
 
   // ── BLOG ───────────────────────────────────────────────────
@@ -1019,7 +1059,7 @@ export const en = {
         body: [
           "For twenty years, SEO meant one thing: rank a page in Google's blue links. That world isn't gone, but it now shares the stage with AI answer engines like ChatGPT, Perplexity, Gemini and Google's AI Overviews.",
           "Generative Engine Optimization (GEO), sometimes called Answer Engine Optimization (AEO), is the practice of becoming the source an AI cites when it answers a question. The good news: most of the foundations overlap with strong technical SEO.",
-          "Start with clarity and structure. AI models reward content that states answers plainly, uses clean headings, and backs claims with specifics. Add structured data, build topical authority, and make your brand a recognisable entity across the web.",
+          "Start with clarity and structure. AI models reward content that states answers plainly, uses clean headings, and backs claims with specifics. Add structured data, build topical authority, and make your brand a recognizable entity across the web.",
           "The brands winning today aren't choosing between SEO and GEO. They're building one content system that serves both, and compounding the advantage every month.",
         ],
       },
@@ -1066,7 +1106,7 @@ export const en = {
         author: "AILABS",
         body: [
           "Not every Shopify project needs everything. The highest-ROI work usually lives in a handful of flows: the product page, the cart, the checkout, and post-purchase retention.",
-          "We scope each flow separately so you can prioritise. A faster, clearer PDP and a frictionless checkout often pay for the whole project before the fancier features are even built.",
+          "We scope each flow separately so you can prioritize. A faster, clearer PDP and a frictionless checkout often pay for the whole project before the fancier features are even built.",
           "Upsells and subscriptions raise average order value and lifetime value, but only once the core buying flow is clean. Sequence matters.",
           "Scoping by flow keeps budgets honest and lets us ship value in weeks, not quarters.",
         ],

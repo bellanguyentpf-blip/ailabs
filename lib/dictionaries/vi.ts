@@ -39,8 +39,8 @@ export const vi: Dictionary = {
       name: "AI Website Development",
       tagline: "Website biết tư duy, chuyển đổi và mở rộng.",
       summary:
-        "Website ưu tiên chuyển đổi, xây dựng cùng AI, từ nội dung, bố cục đến cá nhân hoá và khả năng hiển thị trên công cụ tìm kiếm.",
-      why: "Hầu hết website chỉ là tờ rơi. Chúng tôi xây website như một cỗ máy tăng trưởng: nhanh, chuẩn ngữ nghĩa và có cấu trúc để cả con người lẫn công cụ tìm kiếm AI đều hiểu và gợi ý bạn.",
+        "Chúng tôi xây website thực sự hoạt động cho doanh nghiệp của bạn, thu hút đúng khách hàng, chuyển đổi họ thành lead và mở rộng cùng sự phát triển của bạn. Quy trình hỗ trợ AI giúp bạn ra mắt nhanh hơn mà không cắt xén chất lượng.",
+      why: "Hầu hết website chỉ đứng đó như tờ rơi kỹ thuật số. Chúng tôi xây website như một cỗ máy tăng trưởng: nhanh, chuẩn ngữ nghĩa và có cấu trúc để cả con người lẫn công cụ tìm kiếm AI đều tìm thấy và gợi ý bạn.",
       highlights: [
         "Nội dung & mô hình hoá nội dung tối ưu theo phễu, hỗ trợ bởi AI",
         "Headless, chuẩn Core Web Vitals tuyệt đối (Next.js)",
@@ -103,7 +103,7 @@ export const vi: Dictionary = {
       name: "SEO & AI Search Visibility",
       tagline: "Được Google tìm thấy, và cả AI.",
       summary:
-        "Lên top tìm kiếm truyền thống và trở thành nguồn được trích dẫn trong ChatGPT, Perplexity, Gemini và AI Overviews (GEO/AEO).",
+        "Chúng tôi giúp doanh nghiệp của bạn lên top Google và được đề xuất trong ChatGPT, Perplexity và Gemini. Một chiến lược toàn diện bao gồm SEO kỹ thuật, nội dung, topical authority và Generative Engine Optimization.",
       why: "Tìm kiếm đang tách làm hai: liên kết xanh và câu trả lời AI. Chúng tôi tối ưu cho cả hai, SEO kỹ thuật cộng Tối ưu Công cụ Sinh (GEO) để thương hiệu của bạn là câu trả lời, không phải chú thích.",
       highlights: [
         "Audit SEO kỹ thuật & khắc phục Core Web Vitals",
@@ -159,6 +159,10 @@ export const vi: Dictionary = {
           a: "Hầu hết agency SEO chỉ tối ưu cho Google. Chúng tôi xây dựng chiến lược bao gồm cả SEO truyền thống lẫn AI search visibility, nơi ngày càng nhiều quyết định mua hàng bắt đầu. Kết hợp với sản xuất nội dung nội bộ và báo cáo minh bạch, khách hàng có chiến lược tìm kiếm toàn diện và sẵn sàng cho tương lai hơn.",
         },
       ],
+      testimonial: {
+        quote: "We were stuck on page three for every keyword that mattered. Six months in, we rank first for most of them and our brand is showing up inside ChatGPT and Perplexity. Inbound leads are up significantly.",
+        author: "Nam Hoang",
+      },
     },
     {
       slug: "ai-content-marketing",
@@ -186,6 +190,10 @@ export const vi: Dictionary = {
       midCta: {
         headline: "Nội dung xây pipeline. Xuất bản đúng lịch, mỗi tuần.",
         sub: "Ngừng trì hoãn nội dung. Hãy để chúng tôi xây hệ thống cho bạn.",
+      },
+      testimonial: {
+        quote: "Chúng tôi đã đi từ đăng bài khi nào rảnh sang một lịch nội dung đầy đủ được ship mỗi tuần. Traffic blog tăng đều theo từng tháng và chúng tôi bắt đầu nhận được lead inbound mà trước đây chưa từng có.",
+        author: "Marketing Manager, thương hiệu E-commerce",
       },
       sectionsTitle: "Những gì chúng tôi sản xuất và cách thực hiện",
       sections: [
@@ -404,6 +412,10 @@ export const vi: Dictionary = {
           a: "Có. Vai trò của chúng tôi không dừng lại ở phát triển. Chúng tôi làm việc với thương hiệu liên tục để theo dõi hiệu suất store, chạy kiểm thử tối ưu, cải thiện luồng tự động hóa và xác định cơ hội tăng trưởng khi doanh nghiệp phát triển.",
         },
       ],
+      testimonial: {
+        quote: "Our store looked outdated and the checkout was losing people. AILABS rebuilt it from the ground up. Conversion rate went up noticeably in the first month and the store finally reflects the brand we actually are.",
+        author: "Alice L",
+      },
     },
     {
       slug: "ai-training",
@@ -412,7 +424,7 @@ export const vi: Dictionary = {
       name: "AI Training & Consulting",
       tagline: "Học AI vượt ra ngoài prompting.",
       summary:
-        "Đào tạo AI thực hành cho cá nhân và tổ chức muốn vượt qua việc dùng tool cơ bản và xây dựng quy trình, hệ thống tự động hóa thực sự tạo ra năng suất lâu dài.",
+        "Đào tạo AI thực hành cho đội nhóm và cá nhân muốn vượt ra ngoài việc viết prompt cơ bản và xây dựng workflow thực sự, AI agent và hệ thống tự động hóa tạo ra năng suất lâu dài.",
       why: "Hầu hết mọi người đã thử các công cụ AI. Ít ai biết cách ứng dụng chúng vào công việc thực tế. Chúng tôi tập trung vào xây dựng workflow, không chỉ viết prompt.",
       highlights: [
         "Ứng dụng vào công việc thực: content, nghiên cứu, marketing, vận hành và nhiều hơn nữa",
@@ -437,13 +449,6 @@ export const vi: Dictionary = {
           body: [
             "Hầu hết các khóa học AI tập trung vào lý thuyết hoặc công cụ đơn lẻ. Cách tiếp cận của chúng tôi tập trung vào ứng dụng thực tế. Học viên học cách AI có thể hỗ trợ công việc hàng ngày trong sáng tạo nội dung, nghiên cứu, marketing, vận hành, quản lý dự án, phát triển phần mềm và các quy trình kinh doanh.",
             "Thay vì dạy một nền tảng duy nhất, chúng tôi giúp học viên hiểu cách các công cụ AI khác nhau có thể phối hợp để đạt được kết quả cụ thể. Mục tiêu là trở nên hiệu quả và có năng lực hơn trong thế giới ngày càng được thúc đẩy bởi AI.",
-          ],
-        },
-        {
-          title: "Vượt ra ngoài ChatGPT",
-          body: [
-            "Hệ sinh thái AI tiếp tục phát triển nhanh chóng với các nền tảng, mô hình và khả năng mới xuất hiện mỗi tháng. Chương trình đào tạo giúp học viên hiểu điểm mạnh và trường hợp sử dụng tốt nhất của các nền tảng AI hiện đại và cách kết hợp chúng thành quy trình hiệu quả.",
-            "Từ tạo nội dung và nghiên cứu đến lập trình, tự động hóa, phân tích dữ liệu và quản lý kiến thức, học viên học cách chọn đúng công cụ cho đúng nhiệm vụ trong khi tránh các lỗi và sự kém hiệu quả thường gặp.",
           ],
         },
         {
@@ -510,6 +515,11 @@ export const vi: Dictionary = {
           a: "Liên hệ qua trang contact hoặc đặt lịch tư vấn. Chúng tôi sẽ thảo luận về mục tiêu của đội nhóm, mức độ sử dụng AI hiện tại và điều gì sẽ tạo ra tác động thực tế nhất, sau đó xây dựng chương trình xung quanh đó.",
         },
       ],
+      testimonial: {
+        quote: "Our team had tried AI tools before but never made them stick. After one session with AILABS, we had actual systems in place. The productivity shift was immediate.",
+        author: "Tran Bao Chau, Head of Operations",
+      },
+      sectionsCta: { label: "Liên hệ", href: "/contact" },
     },
   ],
 
@@ -517,59 +527,65 @@ export const vi: Dictionary = {
   caseStudiesList: [
     {
       slug: "fishbone",
-      client: "Fishbone",
-      monogram: "FB",
-      sector: "F&B / Nhà hàng",
-      year: "2024",
+      client: "Thương hiệu Merchandise tại Úc",
+      monogram: "AU",
+      sector: "E-commerce / Merchandise",
+      year: "2023–2024",
       summary:
-        "Tái xây dựng hiện diện số và cỗ máy nội dung cho thương hiệu nhà hàng tăng trưởng nhanh.",
+        "Phát triển cửa hàng Shopify merchandise tại Úc với database hơn 100.000 subscribers, tạo AUD 158.500 từ riêng kênh EDM trong 5 tháng và tỷ lệ hoàn vốn quảng cáo gấp 10 lần.",
       challenge:
-        "Fishbone có nhu cầu lớn nhưng website chậm, khó cập nhật và nội dung thiếu đều đặn.",
+        "Cửa hàng Shopify tại Úc có database subscribers lớn nhưng chưa có kênh quảng cáo hay email có cấu trúc để chuyển đổi lượng khán giả đó thành doanh thu ổn định.",
       solution:
-        "Website headless cộng pipeline nội dung AI giúp menu, câu chuyện và khuyến mãi luôn tươi mới trên mọi kênh.",
-      services: ["Phát triển Website AI", "Content Marketing AI"],
+        "Chương trình hai kênh song song: chiến dịch Google Ads hoàn vốn gấp 10 lần chi phí quảng cáo trong Q1 2024 với 134.200 lượt hiển thị và tỷ lệ chuyển đổi 3,37%, kết hợp chuỗi EDM Klaviyo tạo ra AUD 158.500 từ 1.023 đơn hàng trong 5 tháng cuối 2023.",
+      services: ["Google Ads", "Email Marketing"],
       results: [
-        { metric: "2,4×", label: "Traffic organic" },
-        { metric: "-58%", label: "Thời gian tải trang" },
-        { metric: "4×", label: "Sản lượng nội dung" },
+        { metric: "10x", label: "Tỷ lệ hoàn vốn quảng cáo" },
+        { metric: "3,37%", label: "Tỷ lệ chuyển đổi Google Ads" },
+        { metric: "134.200", label: "Lượt hiển thị quảng cáo" },
+        { metric: "AUD 158k", label: "Doanh thu EDM trong 5 tháng" },
+        { metric: "1.023", label: "Đơn hàng từ email" },
+        { metric: "30%", label: "Tỷ lệ mở email" },
       ],
     },
     {
       slug: "cbl",
-      client: "CBL",
-      monogram: "CB",
-      sector: "Dịch vụ B2B",
+      client: "Cửa hàng Shopify tại Mỹ",
+      monogram: "US",
+      sector: "E-commerce / SEO",
       year: "2024",
       summary:
-        "Biến website doanh nghiệp tĩnh thành nền tảng tạo lead, tối ưu tìm kiếm.",
+        "Đưa một cửa hàng Shopify tại Mỹ từ gần như không có hiện diện organic lên 30.7K từ khoá được index, điểm SEO on-page 98 và 4.9K backlinks thông qua chương trình SEO và nội dung có cấu trúc.",
       challenge:
-        "CBL gần như không xếp hạng từ khoá nào và phụ thuộc hoàn toàn vào giới thiệu để có khách mới.",
+        "Cửa hàng có sản phẩm tốt nhưng gần như không có hiện diện organic. Phụ thuộc vào quảng cáo trả phí, profile backlink yếu, không có cấu trúc internal link để phân phối authority qua các trang danh mục. Các lỗi SEO trên toàn site nhiều và chưa được xử lý.",
       solution:
-        "Đại tu SEO kỹ thuật, bản đồ nội dung theo chủ đề và nhịp xuất bản hỗ trợ bởi AI.",
-      services: ["SEO & Tìm kiếm AI", "Phát triển Website AI"],
+        "Triển khai toàn diện: audit kỹ thuật giảm 36.8% lỗi SEO, nghiên cứu từ khoá và tối ưu on-page toàn bộ trang sản phẩm và danh mục, sản xuất blog và bài viết hằng tuần nhắm vào truy vấn có ý định mua, chương trình xây dựng backlink đạt 4.9K backlinks, và kiến trúc internal linking phân phối authority. Kết quả: điểm SEO on-page 98, 30.7K từ khoá organic được index, và 87 từ khoá được theo dõi tăng hạng.",
+      services: ["SEO & Tìm kiếm AI", "Content Marketing"],
       results: [
-        { metric: "Top 3", label: "Từ khoá cốt lõi" },
-        { metric: "3,1×", label: "Lead chất lượng" },
-        { metric: "+180%", label: "Lượt hiển thị tìm kiếm" },
+        { metric: "98", label: "Điểm SEO on-page" },
+        { metric: "30.7K", label: "Từ khoá organic được index" },
+        { metric: "4.9K", label: "Backlinks xây dựng" },
+        { metric: "87", label: "Từ khoá được theo dõi tăng hạng" },
+        { metric: "36.8%", label: "Giảm lỗi SEO" },
       ],
     },
     {
       slug: "beauty-by-hien",
-      client: "Beauty by Hien",
-      monogram: "BH",
-      sector: "Làm đẹp / TMĐT",
-      year: "2023",
+      client: "Nền tảng Fintech tại Mỹ",
+      monogram: "FT",
+      sector: "Fintech / Web",
+      year: "2024",
       summary:
-        "Thiết kế và dựng storefront Shopify với luồng chuyển đổi mở rộng được.",
+        "Xây dựng website fintech hoàn chỉnh cho thị trường Mỹ trong 3 tuần từ đầu, sau đó triển khai chương trình programmatic SEO tạo ra hơn 50.000 trang nội dung và tăng traffic organic lên 5 lần trong vòng 3 tháng sau launch.",
       challenge:
-        "Thương hiệu làm đẹp đang lớn nhưng kẹt ở template chung chung với checkout rò rỉ khách.",
+        "Một công ty fintech tại Mỹ cần website hoàn chỉnh, tối ưu chuyển đổi trong vòng 3 tuần mà chưa có design system, chưa có hạ tầng nội dung và deadline launch cứng. Doanh nghiệp cũng cần organic traffic ở quy mô lớn để giảm phụ thuộc vào quảng cáo trả phí.",
       solution:
-        "Theme Shopify tuỳ chỉnh, tối ưu checkout và luồng upsell, cùng tự động hoá email giữ chân.",
-      services: ["Phát triển Shopify", "Content Marketing AI"],
+        "Xây dựng song song: design system, kiến trúc thông tin và toàn bộ trang cốt lõi được phát triển đồng thời trong 3 tuần. Customer journey mapping và tracking được tích hợp từ ngày đầu để tối ưu chuyển đổi thành lead. Sau launch, chương trình programmatic SEO tạo ra hơn 50.000 trang nội dung nhắm vào các truy vấn tài chính có ý định cao tại thị trường Mỹ. Traffic organic tăng 5 lần trong vòng 3 tháng sau khi ra mắt.",
+      services: ["AI Website Development", "SEO & Tìm kiếm AI"],
       results: [
-        { metric: "+46%", label: "Tỷ lệ chuyển đổi" },
-        { metric: "+32%", label: "Giá trị đơn trung bình" },
-        { metric: "2,2×", label: "Khách quay lại" },
+        { metric: "5x", label: "Tăng trưởng traffic organic trong 3 tháng" },
+        { metric: "50K+", label: "Trang programmatic SEO được tạo" },
+        { metric: "3 tuần", label: "Website hoàn chỉnh từ đầu" },
+        { metric: "Ngày 1", label: "Tracking & journey analytics hoạt động" },
       ],
     },
   ],
@@ -604,7 +620,7 @@ export const vi: Dictionary = {
     servicesSection: {
       eyebrow: "Chúng tôi làm gì",
       title: "Dịch vụ thiết kế cho kỷ nguyên AI",
-      desc: "Năm dịch vụ tập trung đưa bạn từ vô hình đến tất yếu.",
+      desc: "Phát triển website, SEO và AI search, sản xuất nội dung, tăng trưởng Shopify, và đào tạo AI. Năm dịch vụ phối hợp để xây dựng doanh nghiệp mà khách hàng có thể tìm thấy, tin tưởng và mua hàng.",
     },
     process: {
       eyebrow: "Cách chúng tôi làm việc",
@@ -673,7 +689,7 @@ export const vi: Dictionary = {
   services: {
     eyebrow: "Dịch vụ",
     title: "Mọi thứ bạn cần để tăng trưởng trong kỷ nguyên AI",
-    desc: "Từ website đến khả năng hiển thị tìm kiếm đến cỗ máy nội dung, và cả đào tạo để tự vận hành tất cả.",
+    desc: "Phát triển website, SEO và AI search, sản xuất nội dung, tăng trưởng Shopify, và đào tạo AI. Tất cả những gì một doanh nghiệp đang phát triển cần để được tìm thấy và chuyển đổi.",
     whyTitle: "Tại sao",
     deliverablesTitle: "Bạn nhận được gì",
     flowsTitle: "Flow & báo giá",
@@ -703,7 +719,7 @@ export const vi: Dictionary = {
     tiers: [
       {
         name: "Website",
-        startingAt: "Liên hệ",
+        startingAt: "Từ $600",
         forWho: "Thương hiệu cần website nhanh, ưu tiên chuyển đổi, sẵn sàng AI.",
         includes: [
           "UX, hệ thống thiết kế & dựng web",
@@ -714,7 +730,7 @@ export const vi: Dictionary = {
       },
       {
         name: "Tìm kiếm & Nội dung",
-        startingAt: "Liên hệ",
+        startingAt: "Từ $300 / tháng",
         forWho: "Đội ngũ muốn lên top Google và được AI trích dẫn.",
         includes: [
           "SEO kỹ thuật + GEO/AEO",
@@ -726,7 +742,7 @@ export const vi: Dictionary = {
       },
       {
         name: "Thương mại",
-        startingAt: "Liên hệ",
+        startingAt: "Từ $600",
         forWho: "Thương hiệu Shopify mở rộng doanh thu và giữ chân.",
         includes: [
           "Phạm vi & báo giá theo từng flow",
@@ -740,9 +756,9 @@ export const vi: Dictionary = {
       eyebrow: "Nâng năng lực đội ngũ",
       title: "Đào tạo AI cho đội marketing của bạn",
       desc: "Buổi thực hành 2 giờ xây quanh chính công cụ của bạn, để đội ngũ làm việc cùng AI ngay hôm sau.",
-      price: "700.000₫",
-      unit: "mỗi người",
-      duration: "buổi 2 giờ",
+      price: "$20",
+      unit: "mỗi giờ",
+      duration: "tối thiểu 2 giờ",
       note: "Đào tạo AI trực tiếp chỉ áp dụng tại Việt Nam.",
       cta: "Đặt buổi học",
     },
@@ -782,41 +798,56 @@ export const vi: Dictionary = {
   // ── VỀ CHÚNG TÔI ───────────────────────────────────────────
   about: {
     eyebrow: "Về AILABS",
-    title: "Một thập kỷ xây những thứ được tìm thấy.",
-    lead: "AILABS là đội ngũ nhỏ, giàu kinh nghiệm với hơn 10 năm ở giao điểm của thiết kế, tìm kiếm và tự động hoá, nay hướng thẳng vào kỷ nguyên AI.",
+    title: "Xây dựng bởi những marketer dấn thân toàn diện vào AI.",
+    lead: "Bella và Jason có hơn một thập kỷ làm digital marketing và e-commerce cho các thương hiệu tại Việt Nam, Úc và xa hơn. AILABS là thứ họ xây khi quyết định đặt cược hoàn toàn vào AI.",
     story: [
-      "Chúng tôi xây website từ rất lâu trước khi \"AI\" xuất hiện trên mọi slide. Thập kỷ đó dạy chúng tôi điều thật sự tạo khác biệt: tốc độ, sự rõ ràng, cấu trúc và nội dung mà con người (và giờ là máy móc) tin tưởng.",
-      "Hôm nay chúng tôi kết hợp tay nghề đó với AI, không phải chiêu trò, mà là đòn bẩy. Chúng tôi giúp thương hiệu được khám phá trên Google và trong các công cụ trả lời AI, rồi xây hệ thống giữ vững vị trí đó.",
-      "Chúng tôi làm tinh gọn và giàu kinh nghiệm. Không qua trung gian account, bạn làm việc trực tiếp với người thực thi.",
+      "Mười năm làm marketing thực chiến dạy bạn điều gì thật sự tạo ra kết quả. SEO, quảng cáo có phí, Shopify, vận hành nội dung. Chúng tôi đã làm tất cả, trực tiếp, cho những doanh nghiệp thật với chỉ tiêu thật.",
+      "Khi AI trưởng thành vượt qua hype, chúng tôi không chỉ gắn thêm nó vào quy trình cũ. Chúng tôi xây lại xung quanh nó. AI agent được thiết kế riêng cho từng quy trình kinh doanh cụ thể. Workflow tự động nghiên cứu, viết và xuất bản đúng lịch. Hệ thống quản lý tri thức trên Obsidian giúp đội nhóm đồng bộ mà không cần họp liên miên.",
+      "AILABS tồn tại cho các startup và doanh nghiệp vừa và nhỏ muốn AI thực sự vận hành bên trong tổ chức, không phải một bộ công cụ chung chung được thả vào rồi tự xử lý. Chúng tôi lập bản đồ quy trình của bạn trước, sau đó mới xây hệ thống phù hợp. Kết quả là tự động hóa tích lũy theo thời gian thay vì nằm im không dùng đến.",
+      "Ngoài hai người sáng lập, chúng tôi còn có đội ngũ chuyên nghiệp hỗ trợ xuyên suốt các dự án: designer sáng tạo, chuyên gia UI/UX, và đội IT có thể làm việc trên nhiều ngôn ngữ và nền tảng công nghệ khác nhau. Đúng người, đúng dự án, mỗi lần.",
+      "Bạn làm việc trực tiếp với người thực thi. Không qua account manager, không bàn giao giữa chừng, không bất ngờ.",
+    ],
+    foundersTitle: "Người sáng lập",
+    founders: [
+      {
+        name: "Bella Ng",
+        role: "Co-founder, Digital Marketing & AI",
+        bio: "Hơn 10 năm kinh nghiệm về SEO, quảng cáo có phí, chiến lược nội dung và e-commerce. Đã dẫn dắt tăng trưởng cho các thương hiệu tại Úc và Việt Nam bao gồm AN Scent và Gateway Vietnam. Hiện tập trung vào thiết kế AI workflow, GEO và hệ thống nội dung cho doanh nghiệp đang phát triển.",
+      },
+      {
+        name: "Jason T",
+        role: "Co-founder, Project Management & Operations",
+        bio: "Nền tảng về quản lý dự án, vận hành và triển khai website, nội dung cho các thị trường từ Việt Nam, Úc, Châu Âu đến Mỹ, đa dạng lĩnh vực bao gồm Bán lẻ, SaaS và Tài chính. Ngoài ra còn có kinh nghiệm quản trị và phát triển web trên Shopify.",
+      },
     ],
     statsTitle: "Bằng những con số",
     stats: [
-      { value: "10+", label: "Năm kinh nghiệm" },
+      { value: "10+", label: "Năm làm digital marketing" },
       { value: "50+", label: "Dự án đã bàn giao" },
-      { value: "Global", label: "Cung cấp toàn cầu" },
-      { value: "100%", label: "Đội ngũ senior" },
+      { value: "SMB", label: "Tập trung: startup và doanh nghiệp đang phát triển" },
+      { value: "100%", label: "Senior, không có junior" },
     ],
-    valuesTitle: "Cách chúng tôi vận hành",
+    valuesTitle: "Cách chúng tôi làm việc",
     values: [
       {
-        title: "Kết quả hơn sản phẩm",
-        desc: "Chúng tôi đo thành công bằng traffic, lead và doanh thu, không phải số lượng deliverable.",
+        title: "Workflow trước, công cụ sau",
+        desc: "Chúng tôi lập bản đồ quy trình của bạn trước khi đụng vào bất kỳ phần mềm nào. AI agent đúng trong workflow sai chỉ là tự động hóa vấn đề.",
       },
       {
-        title: "AI là đòn bẩy",
-        desc: "Chúng tôi dùng AI để làm nhiều hơn, nhanh hơn, luôn có biên tập viên là người chịu trách nhiệm chất lượng.",
+        title: "Agent xây cho doanh nghiệp của bạn",
+        desc: "AI đại trà cho kết quả đại trà. Chúng tôi thiết kế và xây agent xung quanh vận hành, ngôn ngữ và mục tiêu cụ thể của bạn.",
       },
       {
-        title: "Rõ ràng triệt để",
-        desc: "Phạm vi rõ, báo giá rõ, báo cáo rõ. Bạn luôn biết mọi thứ đang ở đâu.",
+        title: "Tri thức tích lũy theo thời gian",
+        desc: "Chúng tôi thiết lập hệ thống quản lý tri thức có cấu trúc để bối cảnh, quyết định và playbook của doanh nghiệp không nằm trong đầu một người.",
       },
       {
         title: "Sinh ra để được tìm thấy",
-        desc: "Mọi thứ chúng tôi làm đều được thiết kế để được khám phá, bởi con người và bởi AI.",
+        desc: "Mọi website và hệ thống nội dung chúng tôi xây đều được thiết kế để được khám phá, bởi con người và bởi các công cụ tìm kiếm AI.",
       },
     ],
-    ctaTitle: "Muốn đội ngũ senior cho dự án của bạn?",
-    ctaDesc: "Hãy cho chúng tôi biết bạn đang xây gì. Chúng tôi sẽ nói cách giúp nó tăng trưởng.",
+    ctaTitle: "Muốn AI thực sự phù hợp với doanh nghiệp của bạn?",
+    ctaDesc: "Hãy kể chúng tôi nghe cách bạn đang vận hành. Chúng tôi sẽ chỉ cho bạn thấy AI có thể tạo ra kết quả tích lũy ở đâu.",
   },
 
   // ── BLOG ───────────────────────────────────────────────────
